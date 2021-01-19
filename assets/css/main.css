@@ -14,8 +14,7 @@
 html {
   scroll-behavior: smooth;
 }
-
-body {
+html body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
@@ -24,10 +23,13 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-body:before {
+html body:not(.home) {
+  background: #FCFCFC;
+}
+html:before {
   background-image: url("../img/tVector.svg");
   width: 100%;
-  height: 3.188rem;
+  height: 51.125rem;
   content: "";
   background-size: contain;
   position: absolute;
