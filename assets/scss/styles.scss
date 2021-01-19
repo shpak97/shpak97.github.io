@@ -9,9 +9,9 @@
 *,::before,::after{
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
-
+}
 body{
     margin:0;
     font-family: $body-font;
@@ -23,7 +23,6 @@ body{
     &:not(.home) {
         background: #FCFCFC;
     }
-}
     &:before{
         background-image: url("../img/tVector.svg");
         width: 100%;
