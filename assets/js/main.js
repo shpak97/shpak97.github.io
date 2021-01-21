@@ -22,8 +22,8 @@ function linkAction(){
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
-/*==================== SLICK ====================*/
 
+/*==================== SLICK ====================*/
 $(function() {
     $('.single-item').slick({
         arrows: false,
@@ -40,3 +40,16 @@ $(function() {
         }]
     });
 });
+/*==================== FAQ's SHOW/HIDE ====================*/
+const faq = document.getElementById('faq');
+faq.addEventListener( 'click', e => {
+    if(e.target.classList[0] === 'faq__content') {
+        e.target.classList.toggle('active');
+    }
+    if(e.target.classList[0] === 'faq__question') {
+        e.target.parentNode.classList.toggle('active');
+    }
+    if(e.target.classList[0] === 'question-title') {
+        e.target.parentNode.parentNode.classList.toggle('active');
+    }
+} );

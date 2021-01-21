@@ -120,6 +120,12 @@ img {
   font-size: 1.25rem;
 }
 
+.page .security, .page .faq {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
+  border-radius: 3.125rem;
+  position: relative;
+}
 .page__heading {
   padding-top: 7.875rem;
   padding-bottom: 7.125rem;
@@ -746,12 +752,6 @@ img {
 }
 
 /*==========  SECURITY ==========*/
-#security-page .security {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
-  border-radius: 3.125rem;
-  position: relative;
-}
 #security-page .security:before {
   content: "";
   background: url(../img/tVectorRed.svg);
@@ -810,6 +810,70 @@ img {
   z-index: -1;
   border-radius: 50%;
   background-color: #577AF3;
+}
+
+/*==========  FAQ's ==========*/
+.faq__search {
+  text-align: center;
+  margin: 3.375rem auto;
+}
+.faq__search input[name=search] {
+  width: 55%;
+  min-width: 350px;
+  padding: 1rem 3rem;
+  font-size: 0.875rem;
+  line-height: 1.313rem;
+  background-image: url(../img/searchButton.svg);
+  background-repeat: no-repeat;
+  background-position: 1.13rem;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.04);
+  border-radius: 3.75rem;
+  outline: none;
+}
+.faq__question {
+  position: relative;
+  background: #ECF5FF;
+  border-radius: 11px;
+  padding: 1.2rem 1.5rem;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.faq__question:after {
+  content: "";
+  position: absolute;
+  right: 1.438rem;
+  top: 50%;
+  width: 1.322rem;
+  height: 0.754rem;
+  transform: translateY(-50%);
+  background-image: url(../img/arrowDown.svg);
+  background-size: cover;
+}
+.faq__question .question-title {
+  font-size: 1rem;
+  line-height: 100%;
+  color: #5E6266;
+}
+.faq__answer {
+  display: none;
+  transition: 0.5s;
+  padding: 0 1.5rem;
+}
+.faq__content.active .faq__question {
+  background: #F1395B;
+}
+.faq__content.active .faq__question:after {
+  background-image: url(../img/arrowUp.svg);
+}
+.faq__content.active .faq__question .question-title {
+  color: #FFFFFF;
+}
+.faq__content.active .faq__answer {
+  display: block;
+  height: auto;
 }
 
 /*========== FOOTER ==========*/

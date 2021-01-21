@@ -1,10 +1,6 @@
 /*==========  SECURITY ==========*/
 #security-page {
   .security {
-    background: #FFFFFF;
-    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
-    border-radius: 3.125rem;
-    position: relative;
     &:before {
       content: "";
       background: url(../img/tVectorRed.svg);

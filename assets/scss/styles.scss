@@ -107,6 +107,12 @@ img{
 }
 
 .page {
+    .security,.faq {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
+        border-radius: 3.125rem;
+        position: relative;
+    }
     &__heading {
         padding-top: 7.875rem;
         padding-bottom: 7.125rem;
@@ -182,5 +188,6 @@ img{
 @import "home";
 @import "features";
 @import "security";
+@import "faq";
 @import "footer";
 @import "media-queries";
