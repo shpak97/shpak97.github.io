@@ -1,0 +1,113 @@
+.newsletter-block.popup {
+	background:none;
+	margin:0;
+}
+.newsletter-block.popup .form-container {
+	display:-ms-grid;
+	display:grid;
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	justify-items:center;
+}
+.newsletter-block.popup h2 {
+	background:none;
+	display: inline-block;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 1;
+	grid-column: 1/2;
+	width:-webkit-fit-content;
+	width:-moz-fit-content;
+	width:fit-content;
+}
+.newsletter-block.popup form {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 1;
+	grid-column: 1/2;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-width: 250px;
+}
+.newsletter-block.popup input[type="email"] {
+	box-sizing: border-box;
+	width: 100%;
+}
+.sgpb-popup-close-button-1 {
+	top: 65px !important;
+	right: 55px !important;
+}
+@media only screen and (max-width: 768px){
+	.sgpb-theme-1-content {
+		min-width: 460px !important;
+		min-height: 293px !important;
+	}
+	.sgpb-popup-close-button-1 {
+		top: 40px !important;
+		right: 35px !important;
+		width: 25px !important;
+		height: 25px !important;
+	}
+	.newsletter-block.popup {
+		padding:2rem 0;
+	}
+	.newsletter-block.popup h2 {
+		font-size:1rem;
+		margin:0;
+	}
+	.newsletter-block.popup form {
+		-ms-grid-column-align:center;
+		justify-self:center;
+		max-width: 147px;
+	}
+	.newsletter-block.popup input[type="email"] {
+		font-size:0.625rem;
+		padding: .75rem .5rem;		margin-bottom: .75rem;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	.newsletter-block.popup  .btn-primary {
+		font-size:.9rem;
+	}
+}
+@media only screen and (max-width: 576px){
+	.sgpb-popup-dialog-main-div-theme-wrapper-1, #sgpb-popup-dialog-main-div, #sgpb-popup-dialog-main-div > div, .sg-popup-builder-content, .modal-newsletter {
+		max-width: none !important;
+		width: auto !important;
+	}
+}
+@media only screen and (max-width: 480px){
+	.sgpb-popup-dialog-main-div-theme-wrapper-1, #sgpb-popup-dialog-main-div, #sgpb-popup-dialog-main-div > div, .sg-popup-builder-content, .modal-newsletter {
+		max-width: 340px !important;
+		width:100% !important;
+	}
+	.sgpb-theme-1-content {
+		min-width: 340px !important;
+		min-height: 217px !important;
+	}
+	.sgpb-popup-close-button-1 {
+		top: 30px !important;
+		right: 30px !important;
+		width: 20px !important;
+		height: 20px !important;
+	}
+	.newsletter-block.popup {
+		padding:0;
+	}
+	.newsletter-block.popup h2 {
+		font-size:0.875rem;
+		margin:0;
+	}
+	.newsletter-block.popup form {
+		-ms-grid-column-align:end;
+		justify-self:end;
+	}
+	.newsletter-block.popup input[type="email"] {
+		font-size:0.625rem;
+		padding: .75rem .5rem;		margin-bottom: .75rem;
+
+	}
+	.newsletter-block.popup  .btn-primary {
+		font-size:0.625rem;
+	}
+}

@@ -58,7 +58,7 @@ img{
     gap: 1.5rem;
 }
 .bd-container {
-    max-width: 1140px;
+    max-width: $container;
     width: calc(100% - 2rem);
     margin-left: auto;
     margin-right: auto;
@@ -106,6 +106,44 @@ img{
     font-size: $h5-font-size;
 }
 
+.page {
+    &__heading {
+        padding-top: 7.875rem;
+        padding-bottom: 7.125rem;
+        display: flex;
+        justify-content: center;
+    }
+    &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.438rem;
+        line-height: 3.438rem;
+        color: $title-color;
+        margin-left: 1rem;
+    }
+    .section {
+        &-inner {
+            max-width: 992px;
+            width: calc(100% - 13rem);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: $title-color;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        &-subtitle {
+            font-size: $small-font-size;
+            line-height: 1.5rem;
+            font-weight: normal;
+            color: $text-color-light;
+        }
+    }
+}
 /*========== SLICK ==========*/
 
 .slick-dots li button {
@@ -143,5 +181,6 @@ img{
 @import "header";
 @import "home";
 @import "features";
+@import "security";
 @import "footer";
 @import "media-queries";
