@@ -754,13 +754,14 @@ img {
 }
 #security-page .security:before {
   content: "";
-  background: url("../img/tVectorRed.svg");
+  background: url(../img/tVectorRed.svg);
   background-repeat: no-repeat;
-  background-position-x: calc(100% - 3.125rem);
+  background-size: cover;
   position: absolute;
   top: -4.375rem;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: calc(100% - 6rem);
+  transform: translateX(-50%);
   height: 4.375rem;
   z-index: -1;
 }
@@ -785,7 +786,7 @@ img {
   font-size: 1.75rem;
   line-height: 1.75rem;
   color: #577AF3;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1rem;
 }
 #security-page .security__subtitle {
   font-size: 1rem;
@@ -924,8 +925,24 @@ img {
   .page-features .features__content:nth-child(3n) {
     grid-column: unset;
   }
+
+  #security-page .security__content, #security-page .security__content.even {
+    flex-direction: column-reverse;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #security-page .security__data {
+    max-width: none;
+    text-align: center;
+  }
+  #security-page .security__icon {
+    margin-bottom: 2.875rem;
+  }
 }
 @media screen and (max-width: 768px) {
+  .page .section-inner {
+    width: calc(100% - 3rem);
+  }
+
   .home__container {
     padding-top: 3.125rem;
   }
@@ -1205,10 +1222,59 @@ img {
     height: 7.188rem;
     margin-bottom: 0.625rem;
   }
+
+  #security-page .security:before {
+    top: -33px;
+  }
 }
 @media screen and (max-width: 576px) {
   .page-features .features__content:nth-child(2) .features__img {
     justify-self: end;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page__heading {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 3.625rem 0;
+  }
+  .page__icon {
+    width: 1.625rem;
+    height: 1.926rem;
+  }
+  .page .section-title {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    text-align: center;
+  }
+  .page .section-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    text-align: center;
+  }
+
+  #security-page .security:before {
+    top: -1.375rem;
+  }
+  #security-page .security__data {
+    max-width: none;
+    text-align: center;
+  }
+  #security-page .security__title {
+    font-size: 1.25rem;
+  }
+  #security-page .security__subtitle {
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    text-align: center;
+  }
+  #security-page .security__icon svg {
+    width: 11.375rem;
+    height: 11.375rem;
+  }
+  #security-page .security__icon:after {
+    width: 8rem;
+    height: 8rem;
   }
 }
 
