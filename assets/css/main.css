@@ -794,6 +794,10 @@ img {
 #security-page .security__subtitle {
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #999999;
+}
+#security-page .security__subtitle a {
+  color: #999999;
 }
 #security-page .security__icon {
   position: relative;

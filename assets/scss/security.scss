@@ -40,6 +40,10 @@
     &__subtitle {
       font-size: $small-font-size;
       line-height: 1.5rem;
+      color: $text-color-light;
+      a {
+        color: $text-color-light;
+      }
     }
     &__icon {
       position: relative;
