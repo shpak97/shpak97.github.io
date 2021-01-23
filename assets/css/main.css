@@ -751,6 +751,7 @@ img {
 }
 .page-features .features__content:nth-child(6) .features__img img {
   max-height: 465px;
+  object-fit: contain;
 }
 
 /*==========  SECURITY ==========*/
