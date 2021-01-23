@@ -89,7 +89,12 @@
     .security {
       &__content,&__content.even  {
         flex-direction: column-reverse;
-        border-bottom: 1px solid rgba(0,0,0, .1)
+        border-bottom: 1px solid rgba(0,0,0, .1);
+      }
+      &__content {
+        &:last-child {
+          border-bottom: none;
+        }
       }
       &__data {
         max-width: none;
@@ -105,6 +110,13 @@
       position: relative;
       &:after {
         background-position: 90% 50%, 10% 50%, 25% 29%, 34% 40%;
+      }
+    }
+  }
+  #contact-us-page {
+    .page__heading {
+      &:after {
+        background-position: 5% 50%, 80% 10%, 0% 46%;
       }
     }
   }
@@ -435,6 +447,14 @@
       }
     }
   }
+  #contact-us-page {
+    .page__heading {
+      &:after {
+        background-position: 3% 15%, 100% 10%, 0% 19%;
+        background-size: 5rem 5rem, 4rem 4rem, 2rem 2rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -459,6 +479,9 @@
     font-size: 1rem;
   }
   #security-page, #faq-page, #contact-us-page {
+    .security,.faq, .contact-us {
+      padding: 1rem 0;
+    }
     .page {
       &__heading {
         padding: 3.625rem 0;
@@ -565,6 +588,39 @@
       &:after {
         background-position: 105% 20%, 0% 70%, 10% 29%, 45% 19%;
         background-size: 6rem 6rem, 4rem 4rem, 2rem 2rem, 1rem 1rem;
+      }
+    }
+  }
+
+  #contact-us-page {
+    .contact-us {
+      &__content {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
+      &__item {
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+      }
+      &__logo, &__title, &__subtitle {
+        margin-bottom: 1rem;
+      }
+      &__title {
+        font-size: $small-font-size;
+      }
+      &__subtitle {
+        font-size: $smaller-font-size;
+        line-height: 130%;
+      }
+      &__mail {
+        font-size: 0.938rem;
+      }
+    }
+    .page__heading {
+      &:after {
+        background-position: 2% 20%, 100% 10%, 0% 20%;
+        background-size: 2rem 2rem, 2rem 2rem, 1rem 1rem;
       }
     }
   }

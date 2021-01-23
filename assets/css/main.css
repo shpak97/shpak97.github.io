@@ -120,7 +120,7 @@ img {
   font-size: 1.25rem;
 }
 
-.page .security, .page .faq {
+.page .security, .page .faq, .page .contact-us {
   background: #FFFFFF;
   box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
   border-radius: 3.125rem;
@@ -656,7 +656,7 @@ img {
 }
 .page-features .features__content:nth-child(3) .features__img img {
   max-height: 465px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .page-features .features__content:nth-child(3) .features__icon {
   text-align: center;
@@ -937,6 +937,65 @@ img {
   background-size: 10rem 10rem, 6rem 6rem, 4rem 4rem, 2rem 2rem;
 }
 
+/*==========  CONTACT US ==========*/
+#contact-us-page .page__heading {
+  position: relative;
+}
+#contact-us-page .page__heading:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/letter.svg"), url("../img/letter2.svg"), url("../img/square.svg");
+  background-repeat: no-repeat;
+  background-position: 15% 50%, 80% 10%, 11% 46%;
+  background-size: 10rem 10rem, 6rem 6rem, 4rem 4rem;
+}
+#contact-us-page .contact-us__content {
+  grid-template-columns: repeat(auto-fit, minmax(364px, 1fr));
+  margin-top: 4.375rem;
+  margin-bottom: 9.375rem;
+}
+#contact-us-page .contact-us__item {
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid;
+  text-align: center;
+  padding: 5rem 4rem;
+}
+#contact-us-page .contact-us__item:first-child {
+  background: #FFF3F5;
+  border: 1px solid #F2395B;
+  border-color: #F2395B;
+}
+#contact-us-page .contact-us__item:last-child {
+  background: #ECF5FF;
+  border-color: #577AF3;
+}
+#contact-us-page .contact-us__logo, #contact-us-page .contact-us__title, #contact-us-page .contact-us__subtitle {
+  margin-bottom: 2.313rem;
+}
+#contact-us-page .contact-us__title {
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 100%;
+  color: #000000;
+}
+#contact-us-page .contact-us__subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 130%;
+}
+#contact-us-page .contact-us__mail {
+  font-size: 1.125rem;
+  line-height: 130%;
+  text-decoration: none;
+  color: #4D494A;
+  font-weight: bold;
+}
+
 /*========== FOOTER ==========*/
 .footer {
   background: #5E5E5E;
@@ -1055,6 +1114,9 @@ img {
     flex-direction: column-reverse;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+  #security-page .security__content:last-child {
+    border-bottom: none;
+  }
   #security-page .security__data {
     max-width: none;
     text-align: center;
@@ -1068,6 +1130,10 @@ img {
   }
   #faq-page .page__heading:after {
     background-position: 90% 50%, 10% 50%, 25% 29%, 34% 40%;
+  }
+
+  #contact-us-page .page__heading:after {
+    background-position: 5% 50%, 80% 10%, 0% 46%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1367,6 +1433,11 @@ img {
     background-position: 105% 20%, 0% 70%, 10% 29%, 45% 26%;
     background-size: 8rem 8rem, 5rem 5rem, 3rem 3rem, 2rem 2rem;
   }
+
+  #contact-us-page .page__heading:after {
+    background-position: 3% 15%, 100% 10%, 0% 19%;
+    background-size: 5rem 5rem, 4rem 4rem, 2rem 2rem;
+  }
 }
 @media screen and (max-width: 576px) {
   .page-features .features__content:nth-child(2) .features__img {
@@ -1383,6 +1454,9 @@ img {
     font-size: 1rem;
   }
 
+  #security-page .security, #security-page .faq, #security-page .contact-us, #faq-page .security, #faq-page .faq, #faq-page .contact-us, #contact-us-page .security, #contact-us-page .faq, #contact-us-page .contact-us {
+    padding: 1rem 0;
+  }
   #security-page .page__heading, #faq-page .page__heading, #contact-us-page .page__heading {
     padding: 3.625rem 0;
   }
@@ -1475,6 +1549,33 @@ img {
   #faq-page .page__heading:after {
     background-position: 105% 20%, 0% 70%, 10% 29%, 45% 19%;
     background-size: 6rem 6rem, 4rem 4rem, 2rem 2rem, 1rem 1rem;
+  }
+
+  #contact-us-page .contact-us__content {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  #contact-us-page .contact-us__item {
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+  }
+  #contact-us-page .contact-us__logo, #contact-us-page .contact-us__title, #contact-us-page .contact-us__subtitle {
+    margin-bottom: 1rem;
+  }
+  #contact-us-page .contact-us__title {
+    font-size: 1rem;
+  }
+  #contact-us-page .contact-us__subtitle {
+    font-size: 0.875rem;
+    line-height: 130%;
+  }
+  #contact-us-page .contact-us__mail {
+    font-size: 0.938rem;
+  }
+  #contact-us-page .page__heading:after {
+    background-position: 2% 20%, 100% 10%, 0% 20%;
+    background-size: 2rem 2rem, 2rem 2rem, 1rem 1rem;
   }
 }
 

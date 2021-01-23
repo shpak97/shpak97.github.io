@@ -1,0 +1,65 @@
+/*==========  CONTACT US ==========*/
+#contact-us-page {
+  .page__heading {
+    position: relative;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image:
+              url("../img/letter.svg"),
+              url("../img/letter2.svg"),
+              url("../img/square.svg");
+      background-repeat: no-repeat;
+      background-position: 15% 50%, 80% 10%, 11% 46%;
+      background-size: 10rem 10rem, 6rem 6rem, 4rem 4rem;
+    }
+  }
+  .contact-us {
+    &__content {
+      grid-template-columns: repeat(auto-fit, minmax(364px, 1fr));
+      margin-top: 4.375rem;
+      margin-bottom: 9.375rem;
+    }
+    &__item {
+      box-sizing: border-box;
+      border-radius: 30px;
+      border: 1px solid;
+      text-align: center;
+      padding: 5rem 4rem;
+      &:first-child {
+        background: #FFF3F5;
+        border: 1px solid #F2395B;
+        border-color: #F2395B;
+      }
+      &:last-child {
+        background: #ECF5FF;
+        border-color: $button-color;
+      }
+    }
+    &__logo, &__title, &__subtitle {
+      margin-bottom: 2.313rem;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 1.375rem;
+      line-height: 100%;
+      color: #000000;
+    }
+    &__subtitle {
+      font-weight: normal;
+      font-size:  $small-font-size;
+      line-height: 130%;
+    }
+    &__mail {
+      font-size: $normal-font-size;
+      line-height: 130%;
+      text-decoration: none;
+      color: #4D494A;
+      font-weight: bold;
+    }
+  }
+}
