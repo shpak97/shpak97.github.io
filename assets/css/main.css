@@ -610,7 +610,7 @@ img {
   height: 2rem;
   position: absolute;
   left: -130px;
-  bottom: 85px;
+  bottom: 45px;
 }
 .page-features .features__content:nth-child(2):before {
   content: "";
@@ -796,8 +796,14 @@ img {
   line-height: 1.5rem;
   color: #999999;
 }
-#security-page .security__subtitle a {
+#security-page .security__more {
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #999999;
+  text-align: center;
+}
+#security-page .security__more a {
+  color: #577AF3;
 }
 #security-page .security__icon {
   position: relative;
@@ -1080,6 +1086,7 @@ img {
 
   .page-features .features__content {
     max-width: none;
+    width: 100%;
   }
 }
 @media screen and (min-width: 993px) {

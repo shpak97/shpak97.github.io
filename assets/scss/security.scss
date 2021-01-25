@@ -41,8 +41,14 @@
       font-size: $small-font-size;
       line-height: 1.5rem;
       color: $text-color-light;
+    }
+    &__more {
+      font-size: $small-font-size;
+      line-height: 1.5rem;
+      color: $text-color-light;
+      text-align: center;
       a {
-        color: $text-color-light;
+        color: $button-color;
       }
     }
     &__icon {
