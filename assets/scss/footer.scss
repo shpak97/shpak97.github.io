@@ -37,8 +37,23 @@
     color: #ffffff;
     margin-top: 3.125rem;
     border-top: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   &__text {
     margin-top: $mb-2;
+    &.india {
+      font-weight: bold;
+      font-style: oblique;
+      font-size: 1.1rem;
+      font-family: cursive;
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 30px;
+        margin-left: 5px;
+      }
+    }
   }
 }

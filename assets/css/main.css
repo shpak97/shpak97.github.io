@@ -1044,9 +1044,24 @@ img {
   color: #ffffff;
   margin-top: 3.125rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .footer__text {
   margin-top: 1rem;
+}
+.footer__text.india {
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 1.1rem;
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+}
+.footer__text.india img {
+  max-width: 30px;
+  margin-left: 5px;
 }
 
 /*========== MEDIA QUERIES ==========*/
