@@ -1,0 +1,28 @@
+body {
+  background: green;
+}
+.header {
+  .container {
+    max-width: 1484px;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    margin-left: 13px;
+    padding: 20px 10px;
+  }
+  &__link {
+    color: #000000;
+    text-transform: uppercase;
+      &:hover {
+        color: lighten(#000000, 10);
+    }
+  }
+}

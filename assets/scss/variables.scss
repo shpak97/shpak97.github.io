@@ -1,0 +1,37 @@
+
+/*========== Colors ==========*/
+$first-color: #4ABB23;
+$second-color: #F9F74B;
+//$title-color: #4D4D4D;
+//$text-color: #666666;
+//$text-color-light: #999999;
+//$button-color: #577AF3;
+//$body-color: #FFFFFF;
+//$container-color: #ffffff;
+
+/*========== Font and typography ==========*/
+$font-title: 'Poppins', sans-serif;
+$font-text: 'Lato', sans-serif;
+$footer-text: 'Rubic', sans-serif;
+
+
+$title-font: 74px;
+$subtitle-font: 20px;
+$text-big-font: 25px;
+$text-medium-font: 18px;
+$text-input-font: 16px;
+$text-small-font: 14px;
+$font-button: 12px;
+
+
+
+
+/*========== Font weight ==========*/
+$font-medium: 500;
+$font-semi-bold: 600;
+
+/*========== GRADIENTS ==========*/
+
+$gradient-button: transparent linear-gradient(100deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
+$gradient-footer: transparent linear-gradient(132deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
+$gradient-copyright: transparent linear-gradient(92deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
