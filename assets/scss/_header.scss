@@ -1,9 +1,31 @@
 body {
-  background: green;
+  //background: green;
 }
 .header {
+  background: $gradient-header;
   .container {
     max-width: 1484px;
+  }
+  .navbar {
+    padding: 0;
+    .container-fluid {
+      padding-right: 0;
+      height: 100%;
+    }
+    &-toggler {
+      height: 80px;
+      width: 72px;
+      border-radius: 0;
+      color: #ffffff;
+      background: #4FBD24;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .navbar-dark .navbar-toggler-icon.user {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 }
 .nav {
@@ -11,12 +33,17 @@ body {
   justify-content: space-between;
   align-items: center;
   &__list {
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
   }
   &__item {
-    margin-left: 13px;
     padding: 20px 10px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  &__item+&__item {
+    margin-left: 13px;
   }
   &__link {
     color: #000000;
