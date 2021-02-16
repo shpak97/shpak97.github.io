@@ -2,28 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
 @import "variables";
 /*========== BASE ==========*/
 *,::before,::after{
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+}
 html {
   scroll-behavior: smooth;
-}
-body{
-  //margin:0;
-  //font-family: $body-font;
-  //font-size: $normal-font-size;
-  //background-color: $body-color;
-  //color: $text-color;
-  //line-height: 1.6;
-  //overflow-x: hidden;
 }
 h1,h2,h3,ul,p{
   margin: 0;
 }
-
 ul{
   padding: 0;
   list-style: none;
@@ -38,6 +31,38 @@ img{
 
 
 /*========== COMPONENTS ==========*/
+.section {
+  &__title {
+    font-family: $font-title;
+    font-size: $title-font;
+    line-height: 69px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    letter-spacing: 1.41px;
+    color: #000000;
+  }
+  &__subtitle {
+    font-family: $font-title;
+    font-size: $subtitle-font;
+    line-height: 30px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 4px;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  &__text {
+    font-family: $font-text;
+    font-size: $text-big-font;
+    line-height: 35px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #333333;
+  }
+}
 .button {
   display: inline-block;
   font-family: $font-title;
@@ -86,4 +111,5 @@ img{
 
 @import "header";
 @import "footer";
+@import "first-screen";
 @import "media";
