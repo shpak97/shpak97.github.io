@@ -16,8 +16,37 @@
   }
 }
 @media screen and  (min-width: 1200px) {
+  .screen {
+    &-first {
+      .section {
+        &__title {
+          font-size: $title-font;
+          line-height: 69px;
+          letter-spacing: .76px;
+          &:after {
+            font-size: 385px;
+            line-height: 508px;
+            letter-spacing: 7.66px;
+          }
+        }
+        &__subtitle {
+          font-size: $subtitle-font;
+          line-height: 30px;
+          letter-spacing: 4px;
+        }
+        &__text {
+          font-size: $text-big-font;
+          line-height: 35px;
+        }
+
+      }
+    }
+  }
   .header {
     background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     .navbar {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -41,8 +70,37 @@
       padding-left: 0 !important;
     }
   }
+  .screen {
+    &-first {
+      .grid {
+        &-col {
+          &:first-child {
+            padding-right: 14px;
+            img {
+              max-height: 402px;
+            }
+          }
+          &:last-child {
+            img {
+              &:first-child {
+                height: 160px;
+              }
+              &:last-child {
+                height: 232px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and  (max-width: 768px) {
+  .section {
+    &__data {
+      margin-top: 43px;
+    }
+  }
   .nav {
     &__logo {
       max-width: 244px;
@@ -72,6 +130,48 @@
     }
     &__btn {
       width: 100%;
+    }
+  }
+  .screen {
+    height: auto;
+    &-first {
+      &:before {
+        content: none;
+      }
+      .container-fluid {
+        padding-bottom: 57px;
+        padding-top: 16px;
+        padding-left: var(--bs-gutter-x,.75rem);
+      }
+      .offset-left {
+        margin-left: 0;
+      }
+      .col-md-6 {
+        display: flex;
+        justify-content: center;
+      }
+      .grid {
+        &-col {
+          &:first-child {
+            padding-right: 7px;
+            img {
+              max-height: 201px;
+              max-width: 187px;
+            }
+          }
+          &:last-child {
+            img {
+              max-width: 149px;
+              &:first-child {
+                max-height: 80px;
+              }
+              &:last-child {
+                max-height: 116px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -34,29 +34,30 @@ img{
 .section {
   &__title {
     font-family: $font-title;
-    font-size: $title-font;
-    line-height: 69px;
+    font-size: $title-resp-font;
+    line-height: 37px;
     font-weight: bold;
     font-style: normal;
     text-align: left;
     letter-spacing: 1.41px;
     color: #000000;
+    margin: 10px auto;
   }
   &__subtitle {
     font-family: $font-title;
-    font-size: $subtitle-font;
-    line-height: 30px;
+    font-size: $font-button;
+    line-height: 15px;
     font-weight: 900;
     font-style: normal;
-    letter-spacing: 4px;
+    letter-spacing: 2.4px;
     color: #333333;
     text-transform: uppercase;
     text-align: left;
   }
   &__text {
     font-family: $font-text;
-    font-size: $text-big-font;
-    line-height: 35px;
+    font-size: $text-input-font;
+    line-height: 20px;
     font-weight: normal;
     font-style: normal;
     text-align: left;
