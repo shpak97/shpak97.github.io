@@ -1,0 +1,131 @@
+.screen {
+  &-advantages {
+    &__card {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 50vh;
+      //max-height: 396px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 36px 70px;
+      cursor: pointer;
+      overflow: hidden;
+      &.people {
+        background-image: url("https://picsum.photos/seed/picsum/287/457");
+      }
+      &:hover {
+        background:$gradient-advantages-cart;
+        &:after {
+          opacity: 0;
+          text-replace: .2s;
+        }
+        .screen-advantages {
+          &__data {
+            bottom: 50%;
+            transform: translateY(50%);
+          }
+          &__title {
+            margin-bottom: 15px;
+          }
+          &__text {
+            display: block;
+            visibility: visible;
+          }
+        }
+      }
+      &:after {
+        content: '';
+        width: 100%;
+        height: 96px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.69;
+        z-index: 0;
+      }
+    }
+    &__data {
+      max-width: calc(100% - 140px);
+      position: absolute;
+      bottom: 36px;
+      z-index: 1;
+      transition: 1s;
+    }
+    &__title {
+      font-family: $font-title;
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: bold;
+      font-style: normal;
+      color:#FFFFFF;
+      z-index: 1;
+      transition: 1s;
+    }
+    &__text {
+      visibility: hidden;
+      display: none;
+      font-family: $font-text;
+      font-size: $text-input-font;
+      line-height: 25px;
+      font-weight: normal;
+      font-style: normal;
+      color: #FFFFFF;
+    }
+  }
+  &-right-image {
+    position: relative;
+    &:before {
+      content: '';
+      width: 195px;
+      width: 12%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: $gradient-side-big-image;
+      z-index: -1;
+    }
+    img {
+      object-fit: cover;
+    }
+    &__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-big {
+        margin-bottom: 24px;
+        width: 100%;
+        img  {
+          width: 100%;
+        }
+      }
+      &-small {
+        text-align: center;
+        position: relative;
+        &:after {
+          content: '';
+          width: 108px;
+          height: 108px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: red;
+        }
+      }
+    }
+    .section {
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.36px;
+        max-width: 462px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

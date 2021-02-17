@@ -17,28 +17,31 @@
 }
 @media screen and  (min-width: 1200px) {
   .screen {
+    .section {
+      &__title {
+        font-size: $title-font;
+        line-height: 69px;
+        letter-spacing: .76px;
+      }
+      &__subtitle {
+        font-size: $subtitle-font;
+        line-height: 30px;
+        letter-spacing: 4px;
+      }
+    }
     &-first {
       .section {
         &__title {
-          font-size: $title-font;
-          line-height: 69px;
-          letter-spacing: .76px;
           &:after {
             font-size: 385px;
             line-height: 508px;
             letter-spacing: 7.66px;
           }
         }
-        &__subtitle {
-          font-size: $subtitle-font;
-          line-height: 30px;
-          letter-spacing: 4px;
-        }
         &__text {
           font-size: $text-big-font;
           line-height: 35px;
         }
-
       }
     }
   }
@@ -171,6 +174,12 @@
             }
           }
         }
+      }
+    }
+    &__advantages {
+      &-card {
+        padding-left: 12px;
+
       }
     }
   }

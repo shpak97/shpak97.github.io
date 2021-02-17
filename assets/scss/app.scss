@@ -84,7 +84,9 @@ img{
     border: 1px solid #707070;
     color: #000000;
     &:hover {
-      color: lighten(#000000, 5);
+      background: $gradient-button;
+      border: 1px solid transparent;
+      color: #FFFFFF;
     }
   }
   &-color {
@@ -110,7 +112,13 @@ img{
   }
 }
 
+
+/*========== IMPORT ==========*/
+
 @import "header";
 @import "footer";
 @import "first-screen";
+/*========== PAGES ==========*/
+@import "pages/main"; //Main Page
+/*========== MEDIA ==========*/
 @import "media";

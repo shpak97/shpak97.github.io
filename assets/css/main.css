@@ -93,7 +93,9 @@ img {
   color: #000000;
 }
 .button-light:hover {
-  color: #0d0d0d;
+  background: transparent linear-gradient(100deg, #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
+  border: 1px solid transparent;
+  color: #FFFFFF;
 }
 .button-color {
   background: transparent linear-gradient(100deg, #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
@@ -118,6 +120,7 @@ img {
   color: #f2f2f2;
 }
 
+/*========== IMPORT ==========*/
 .header {
   background: transparent linear-gradient(99deg, #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
   position: relative;
@@ -360,6 +363,131 @@ img {
   z-index: -1;
 }
 
+/*========== PAGES ==========*/
+.screen-advantages__card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 36px 70px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.screen-advantages__card.people {
+  background-image: url("https://picsum.photos/seed/picsum/287/457");
+}
+.screen-advantages__card:hover {
+  background: transparent linear-gradient(122deg, #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
+}
+.screen-advantages__card:hover:after {
+  opacity: 0;
+  text-replace: 0.2s;
+}
+.screen-advantages__card:hover .screen-advantages__data {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.screen-advantages__card:hover .screen-advantages__title {
+  margin-bottom: 15px;
+}
+.screen-advantages__card:hover .screen-advantages__text {
+  display: block;
+  visibility: visible;
+}
+.screen-advantages__card:after {
+  content: "";
+  width: 100%;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+  opacity: 0.69;
+  z-index: 0;
+}
+.screen-advantages__data {
+  max-width: calc(100% - 140px);
+  position: absolute;
+  bottom: 36px;
+  z-index: 1;
+  transition: 1s;
+}
+.screen-advantages__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
+  z-index: 1;
+  transition: 1s;
+}
+.screen-advantages__text {
+  visibility: hidden;
+  display: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFFFFF;
+}
+.screen-right-image {
+  position: relative;
+}
+.screen-right-image:before {
+  content: "";
+  width: 195px;
+  width: 12%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent linear-gradient(348deg, #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
+  z-index: -1;
+}
+.screen-right-image img {
+  object-fit: cover;
+}
+.screen-right-image__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.screen-right-image__img-big {
+  margin-bottom: 24px;
+  width: 100%;
+}
+.screen-right-image__img-big img {
+  width: 100%;
+}
+.screen-right-image__img-small {
+  text-align: center;
+  position: relative;
+}
+.screen-right-image__img-small:after {
+  content: "";
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: red;
+}
+.screen-right-image .section__title {
+  margin-bottom: 20px;
+}
+.screen-right-image .section__text {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  max-width: 462px;
+  margin-bottom: 20px;
+}
+
+/*========== MEDIA ==========*/
 @media screen and (max-width: 1400px) {
   .footer .col-xxl-4:first-child {
     margin-bottom: 40px;
@@ -372,20 +500,20 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .screen-first .section__title {
+  .screen .section__title {
     font-size: 74px;
     line-height: 69px;
     letter-spacing: 0.76px;
+  }
+  .screen .section__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 4px;
   }
   .screen-first .section__title:after {
     font-size: 385px;
     line-height: 508px;
     letter-spacing: 7.66px;
-  }
-  .screen-first .section__subtitle {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 4px;
   }
   .screen-first .section__text {
     font-size: 25px;
@@ -497,6 +625,9 @@ img {
   }
   .screen-first .grid-col:last-child img:last-child {
     max-height: 116px;
+  }
+  .screen__advantages-card {
+    padding-left: 12px;
   }
 }
 
