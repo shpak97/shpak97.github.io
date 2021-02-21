@@ -1,7 +1,7 @@
 .screen {
   position: relative;
   height: 100vh;
-  overflow-y: hidden;
+  min-height: 900px;
   &-first {
     display: flex;
     align-items: center;
@@ -26,22 +26,33 @@
         }
       }
       &-col {
+        overflow: hidden;
         &:first-child {
           padding-right: 29px;
           img {
-            max-height: 524px;
+            height: 646px;
           }
         }
         &:last-child {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            bottom: -10px;
+            width: 108px;
+            height: 108px;
+            background: url('../img/hp9.png');
+          }
           img {
             &:first-child {
-              height: 193px;
+              height: 256px;
             }
             &:last-child {
-              height: 301px;
+              height: 371px;
             }
           }
         }
@@ -74,6 +85,32 @@
         opacity: 0.84;
         z-index: -1;
       }
+    }
+    .arrow-nextPage {
+      position: absolute;
+      left: 34%;
+      bottom: 43px;
+      width: 40px;
+      height: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000000' class='bi bi-arrow-down-short' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position-y: 8px;
+      opacity: .37;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 108px;
+      height: 108px;
+      background: url("../img/hp9.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: contrast(.8);
     }
   }
 }

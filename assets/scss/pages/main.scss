@@ -5,14 +5,24 @@
       align-items: center;
       position: relative;
       height: 50vh;
-      //max-height: 396px;
+      min-height: 457px;
       background-repeat: no-repeat;
       background-size: cover;
       padding: 36px 70px;
       cursor: pointer;
       overflow: hidden;
+      background-position: center center;
       &.people {
-        background-image: url("https://picsum.photos/seed/picsum/287/457");
+        background-image: url("../img/home_page/hp7.png");
+      }
+      &.products {
+        background-image: url("../img/home_page/hp8.png");
+      }
+      &.process {
+        background-image: url("../img/home_page/hp1.png");
+      }
+      &.technologies {
+        background-image: url("../img/home_page/hp2.png");
       }
       &:hover {
         background:$gradient-advantages-cart;
@@ -79,11 +89,10 @@
     &:before {
       content: '';
       width: 195px;
-      width: 12%;
       height: 100%;
       position: absolute;
       right: 0;
-      top: 0;
+      bottom: 0;
       background: $gradient-side-big-image;
       z-index: -1;
     }
@@ -97,6 +106,19 @@
       &-big {
         margin-bottom: 24px;
         width: 100%;
+        position: relative;
+        overflow: hidden;
+        &:before {
+          content: '';
+          position: absolute;
+          left: -80px;
+          top: 0;
+          width: 108px;
+          height: 108px;
+          background: url("../img/hp9.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
         img  {
           width: 100%;
         }
@@ -104,14 +126,20 @@
       &-small {
         text-align: center;
         position: relative;
+        img {
+          margin-right: -12px;
+        }
         &:after {
           content: '';
+          position: absolute;
+          right: 54px;
+          bottom: 0;
           width: 108px;
           height: 108px;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          background: red;
+          background: url("../img/hp9.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          filter: contrast(.8);
         }
       }
     }

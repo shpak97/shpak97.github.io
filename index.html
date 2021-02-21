@@ -7,7 +7,6 @@
         <!--========== CSS ==========-->
         <!-- Bootstrap core CSS -->
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
         <link rel="stylesheet" href="assets/css/main.css">
         <title>Catalyst Connections</title>
     </head>
@@ -35,18 +34,18 @@
             </div>
         </nav>
     </header>
-    <main class="">
-        <section class="screen screen-first">
+    <main>
+    <section id="screen-first" class="screen screen-first">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-xl-5">
                         <div class="grid-gallery">
                             <div class="grid-col">
-                                <img src="https://picsum.photos/seed/picsum/287/646" alt="" width="287" height="646" class="grid-image">
+                                <img src="assets/img/home_page/hp5.png" alt="" width="287" height="646" class="grid-image">
                             </div>
                             <div class="grid-col">
-                                <img src="https://picsum.photos/seed/picsum/238/256" alt="" width="238" height="256" class="grid-image">
-                                <img src="https://picsum.photos/seed/picsum/238/371" alt="" width="238" height="371" class="grid-image">
+                                <img src="assets/img/home_page/hp6.png" alt="" width="238" height="256" class="grid-image">
+                                <img src="assets/img/home_page/hp10.png" alt="" width="238" height="371" class="grid-image">
                             </div>
                         </div>
                     </div>
@@ -63,9 +62,10 @@
                     </div>
                 </div>
             </div>
-
+            <div id="arrow-nextPage" class="arrow-nextPage">
+            </div>
         </section>
-        <section class="screen screen-advantages">
+    <section id="screen-advantages" class="screen screen-advantages">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 screen-advantages__card people">
@@ -76,25 +76,25 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 screen-advantages__card people">
+                    <div class="col-md-6 screen-advantages__card products">
                         <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">People</h3>
+                            <h3 class="screen-advantages__title">Products</h3>
                             <p class="screen-advantages__text">
                                 At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 screen-advantages__card people">
+                    <div class="col-md-6 screen-advantages__card process">
                         <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">People</h3>
+                            <h3 class="screen-advantages__title">Process</h3>
                             <p class="screen-advantages__text">
                                 At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 screen-advantages__card people">
+                    <div class="col-md-6 screen-advantages__card technologies">
                         <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">People</h3>
+                            <h3 class="screen-advantages__title">Technologies</h3>
                             <p class="screen-advantages__text">
                                 At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
                             </p>
@@ -103,7 +103,7 @@
                 </div>
             </div>
         </section>
-        <section class="screen screen-right-image">
+    <section id="screen-right-image" class="screen screen-right-image">
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-6 d-flex align-items-center">
@@ -117,15 +117,22 @@
                     </div>
                     <div class="col-md-6 px-md-0 screen-right-image__img">
                         <div class="screen-right-image__img-big">
-                            <img src="https://picsum.photos/seed/picsum/582/518" alt="" width="582" height="518" class="grid-image">
+                            <img src="assets/img/home_page/hp4.png" alt="" width="582" height="518" class="grid-image">
                         </div>
                         <div class="screen-right-image__img-small">
-                            <img src="https://picsum.photos/seed/picsum/245/160" alt="" width="245" height="160" class="grid-image">
+                            <img src="assets/img/home_page/hp3.png" alt="" width="245" height="160" class="grid-image">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="scrolling__section">
+            <ul class="scrolling__list">
+                <li><a href="#screen-first" class="scrolling-item active"></a></li>
+                <li><a href="#screen-advantages" class="scrolling-item"></a></li>
+                <li><a href="#screen-right-image" class="scrolling-item"></a></li>
+            </ul>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -214,6 +221,7 @@
 
         <!--========== BOOTSTRAP ==========-->
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
 

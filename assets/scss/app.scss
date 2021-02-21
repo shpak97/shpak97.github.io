@@ -111,6 +111,50 @@ img{
     color: darken(#FFFFFF, 5);
   }
 }
+.scrolling {
+  &__section {
+    position: fixed;
+    right: 43px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  &__list {
+    li:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+  &-item {
+    display: block;
+    border: 2px solid #6A6A6A;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+    &.active {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 4px;
+        height: 4px;
+        background: #313131;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.scrolling-section {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top:50%;
+  background: red;
+}
 
 
 /*========== IMPORT ==========*/
