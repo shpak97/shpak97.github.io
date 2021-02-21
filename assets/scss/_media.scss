@@ -32,7 +32,7 @@
       &__title {
         font-size: $title-font;
         line-height: 69px;
-        letter-spacing: .76px;
+        letter-spacing: 1.41px;
       }
       &__subtitle {
         font-size: $subtitle-font;
@@ -88,6 +88,9 @@
     height: auto;
     min-width: auto;
     &-first {
+      &:before {
+        width: 33.3333333%;
+      }
       .grid {
         &-col {
           &:first-child {
@@ -125,6 +128,9 @@
         }
       }
     }
+  }
+  .scrolling__section {
+    display: none;
   }
 }
 @media screen and  (max-width: 768px) {
@@ -238,8 +244,5 @@
 
       }
     }
-  }
-  .scrolling__section {
-    display: none;
   }
 }

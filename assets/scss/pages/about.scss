@@ -1,0 +1,61 @@
+.screen {
+  &-presidentLetter {
+    background-color: #f5f5f5;
+    &__body {
+      max-width: 1127px;
+      max-height: 510px;
+      padding-top: 106px;
+      padding-bottom: 78px;
+      padding-left: 113px;
+      padding-right: 82px;
+      margin: 0 auto;
+      position: relative;
+      background-color: #FFFFFF;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -40px;
+        top: -40px;
+        height: 108px;
+        width: 108px;
+        background: url('../img/hp9.png');
+        filter: contrast(.922);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 196px;
+        background: $gradient-president-letter;
+        z-index: 0;
+      }
+    }
+    &__title {
+      font-family: $font-title;
+      font-size: 30px;
+      line-height: 49px;
+      font-weight: bold;
+      font-style: normal;
+      color:#000000;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-family: $font-text;
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: normal;
+      font-style: normal;
+      color: #2E2E2E;
+      max-width: 628px;
+      .inner-paragraph {
+        margin-bottom: 15px;
+      }
+    }
+    &__avatar {
+      text-align: right;
+      z-index: 1;
+    }
+  }
+}

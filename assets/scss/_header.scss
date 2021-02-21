@@ -37,13 +37,26 @@
     text-align: center;
   }
   &__item {
-    padding: 20px 10px;
+    margin: 20px 10px;
     &:first-child {
       padding-left: 0;
     }
+    &.active {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 90%;
+        background-color: $first-color;
+      }
+    }
   }
   &__item+&__item {
-    margin-left: 13px;
+    margin-left: 23px;
   }
   &__link {
     color: #000000;
