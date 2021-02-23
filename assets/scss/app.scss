@@ -28,6 +28,7 @@ img{
   max-width: 100%;
   height: auto;
 }
+.slick-list{padding:0 59px 0 0;}
 
 
 /*========== COMPONENTS ==========*/
@@ -42,6 +43,10 @@ img{
     letter-spacing: .76px;
     color: #000000;
     margin: 10px auto;
+    &.small {
+      font-size: 30px !important;
+      line-height: 32px !important;
+    }
   }
   &__subtitle {
     font-family: $font-title;
@@ -94,7 +99,9 @@ img{
     border: 1px solid transparent;
     color: #FFFFFF;
     &:hover {
-      color: darken(#FFFFFF, 10);
+      background: #FFFFFF;
+      border: 1px solid #707070;
+      color: #000000;
     }
   }
 }

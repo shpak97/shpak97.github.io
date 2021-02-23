@@ -2,12 +2,7 @@
 /*========== Colors ==========*/
 $first-color: #4ABB23;
 $second-color: #F9F74B;
-//$title-color: #4D4D4D;
-//$text-color: #666666;
-//$text-color-light: #999999;
-//$button-color: #577AF3;
-//$body-color: #FFFFFF;
-//$container-color: #ffffff;
+
 
 /*========== Font and typography ==========*/
 $font-title: 'Poppins', sans-serif;
@@ -41,3 +36,4 @@ $gradient-advantages-cart: transparent linear-gradient(122deg, $first-color 0%, 
 $gradient-side-big-image: transparent linear-gradient(348deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
 $gradient-side-image: transparent linear-gradient(349deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
 $gradient-president-letter: transparent linear-gradient(161deg, $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;
+$gradient-tabs: transparent linear-gradient(278deg,  $first-color 0%, $second-color 100%) 0% 0% no-repeat padding-box;

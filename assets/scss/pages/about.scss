@@ -2,7 +2,6 @@
   &-presidentLetter {
     background-color: #f5f5f5;
     &__body {
-      max-width: 1127px;
       max-height: 510px;
       padding-top: 106px;
       padding-bottom: 78px;
@@ -56,6 +55,198 @@
     &__avatar {
       text-align: right;
       z-index: 1;
+    }
+  }
+  &-what-next {
+    background-image: url("../img/about_page/about_bg.jpg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    .section {
+      &__title {
+        font-size: 30px !important;
+        line-height: 32px !important;
+        letter-spacing: 0px !important;
+      }
+      &__text {
+        line-height: 23px;
+        color: #2E2E2E;
+      }
+    }
+    .slider {
+      &__card {
+        font-family: $font-text;
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: normal;
+        font-style: normal;
+        color: #2E2E2E;
+        background: #F8F8F8;
+        padding-left: 59px;
+        padding-right: 67px;
+        padding-top: 65px;
+        padding-bottom: 75px;
+        //max-width: 565px;
+        margin-right: 27px;
+      }
+      &__title {
+        font-weight: bold;
+      }
+
+    }
+  }
+  &-left-image {
+    background: $gradient-side-image;
+    background-size: 195px;
+    .section {
+      &__text {
+        margin-bottom: 15px;
+        max-width: 438px;
+      }
+      &__title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        max-width: 508px;
+        margin-left: 0;
+      }
+    }
+    &__image {
+      &.after {
+        position: relative;
+        margin-left: 20px;
+        &:before {
+          content:'';
+          position: absolute;
+          left: -20px;
+          bottom: -20px;
+          width: 108px;
+          height: 108px;
+          background-image: url("../img/hp9.png");
+          z-index: 0;
+        }
+      }
+    }
+    img {
+      position: relative;
+    }
+  }
+  &-right-image {
+    background: $gradient-side-image;
+    background-size: 195px;
+    background-position-x: right;
+    &.industrialResourceCenterOverview {
+      .section {
+        &__title {
+          margin: 10px 0;
+          margin-left: 22px;
+          max-width: 380px;
+        }
+        &__text {
+          font-size: 16px;
+          line-height: 23px;
+        }
+        &__data {
+          align-items: center;
+        }
+      }
+    }
+    &__img {
+      position: relative;
+      img {
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 58px;
+        bottom: -20px;
+        width: 108px;
+        height: 108px;
+        background-image: url("../img/hp9.png");
+        z-index: 0;
+      }
+    }
+  }
+  &-tabs {
+    height: auto;
+    .nav {
+      justify-content: space-around;
+      background: $gradient-tabs;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &__header {
+      padding-left: 89px;
+      padding-right: 89px;
+      &-title {
+        font-family: $font-title;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        padding: 22px 56px;
+        position: relative;
+        &:hover {
+          color: darken(#ffffff, 3%);
+        }
+        &.active:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -31px;
+          width: 55px;
+          height: 16px;
+          border: 28px solid transparent;
+          border-bottom: 16px solid #FFFFFF;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &__container {
+      box-shadow: 0px 0px 20px #00000029;
+    }
+    &__content {
+      padding-left: 89px;
+      padding-right: 89px;
+      padding-top: 77px;
+      padding-bottom: 46px;
+    }
+    &__title {
+      font-family: $font-title;
+      font-size: 30px;
+      line-height: 35px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 0px;
+      color: #000000;
+      padding-bottom: 37px;
+      margin-bottom: 57px;
+      border-bottom: 1px solid #707070;
+    }
+    &__name {
+      font-family: $font-title;
+      font-size: 13px;
+      line-height: 32px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 0px;
+      margin-bottom: 0;
+      color: #2E2E2E;
+    }
+    &__list {
+      font-family: $font-title;
+      font-size: 13px;
+      line-height: 32px;
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: 0px;
+      margin-bottom: 0;
+      color: #2E2E2E;
+    }
+    &__col {
+      margin-bottom: 50px;
     }
   }
 }

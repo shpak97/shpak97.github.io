@@ -5,3 +5,10 @@ if (arrowNextScreen) {
     window.location.hash="screen-advantages";
   });
 }
+jQuery(function($) {
+  $('.slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  });
+});
+
