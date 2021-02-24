@@ -1,7 +1,9 @@
 .screen {
   position: relative;
-  height: 100vh;
+  height: auto;
   min-height: 900px;
+  display: flex;
+  align-items: center;
   &-first {
     display: flex;
     align-items: center;

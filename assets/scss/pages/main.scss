@@ -120,3 +120,16 @@
     }
   }
 }
+#page {
+  &-main {
+    .screen {
+      &-right-image {
+        &__img {
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}

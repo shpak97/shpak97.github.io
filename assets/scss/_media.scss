@@ -142,6 +142,11 @@
         }
       }
     }
+    &-tabs {
+      &__header-title {
+        padding: 20px 15px;
+      }
+    }
     &-left-image {
       min-height: unset;
       .container {
@@ -331,6 +336,28 @@
         &:before {
           content: none !important;
         }
+      }
+    }
+    &-tabs {
+      .nav {
+        flex-direction: column;
+      }
+      &__header-title.active:after {
+        top: 85%;
+        border: 28px solid transparent;
+        border-top: 16px solid #FFFFFF;
+      }
+      &__content {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      &__col {
+        margin-bottom: 15px;
+      }
+      &__list, &__name {
+        line-height: 23px;
       }
     }
   }
