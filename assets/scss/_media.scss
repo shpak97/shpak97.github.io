@@ -112,8 +112,17 @@
     }
     &-what-next {
       background: none;
+      min-height: initial;
+      padding-top: 50px;
+      padding-bottom: 50px;
       .container-slider {
         margin-left: 0!important;
+      }
+      .section {
+        &__data {
+          margin-top: 0;
+          margin-bottom: 25px;
+        }
       }
     }
     &-right-image {

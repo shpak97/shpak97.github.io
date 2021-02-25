@@ -61,6 +61,8 @@
     background-image: url("../img/about_page/about_bg.jpg");
     background-repeat: no-repeat;
     background-position-x: right;
+    padding-top: 124px;
+    padding-bottom: 85px;
     .section {
       &__title {
         font-size: 30px !important;
@@ -70,6 +72,9 @@
       &__text {
         line-height: 23px;
         color: #2E2E2E;
+      }
+      &__data {
+        margin-bottom: 67px;
       }
     }
     .slider {

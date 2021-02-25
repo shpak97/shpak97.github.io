@@ -60,5 +60,31 @@
 @media screen and (max-width: 992px){
   #screen-what-next {
     .slick-list{padding:0 0 0 0;}
+    .arrow-nextSlide {
+      display: none !important;
+    }
+    .dots-list {
+      ul {
+        text-align: center;
+      }
+    }
+    .slider {
+      &__card {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  #screen-what-next {
+    .slider {
+      &__card {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 40px;
+        padding-bottom: 25px;
+      }
+    }
   }
 }
