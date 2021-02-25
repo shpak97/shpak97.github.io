@@ -30,6 +30,7 @@ if(slider) {
   if(window.innerWidth >= 992) {
     slider.style.marginLeft = leftMargin.marginLeft;
     slider.style.paddingLeft = leftMargin.paddingLeft;
+    slider.style.marginRight = 0;
   }else {
     slider.classList.remove('container-slider')
     slider.classList.add('container')
@@ -38,10 +39,14 @@ if(slider) {
   window.addEventListener(`resize`, event => {
     if(window.innerWidth >= 992) {
       slider.style.marginLeft = leftMargin.marginLeft;
+      slider.style.marginRight = 0;
+      slider.classList.add('container-slider')
+      slider.classList.remove('container')
     } else {
       slider.classList.remove('container-slider')
       slider.classList.add('container')
       slider.style.marginLeft = 'auto';
+      slider.style.marginRight = 'auto';
     }
   }, false);
 }
