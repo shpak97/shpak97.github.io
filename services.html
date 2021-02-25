@@ -7,14 +7,15 @@
         <!--========== CSS ==========-->
         <!-- Bootstrap core CSS -->
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="assets/css/main.css">
         <title>Catalyst Connections</title>
     </head>
-    <body id="page-main" class="d-flex flex-column h-100">
+    <body id="page-about" class="page-about d-flex flex-column h-100">
     <header id="header" class="header header-main">
         <nav class="navbar navbar-expand-xl navbar-dark" aria-label="Fifth navbar example">
             <div class="container-fluid">
-                <a href="" class="nav__logo">
+                <a href="index.html" class="nav__logo">
                     <img src="assets/img/logo-site.png" alt="" class="nav__img" width="348">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +27,7 @@
                             <li class="nav__item"><a href="about.html" class="font-light nav__link">About Us</a></li>
                             <li class="nav__item"><a href="#" class="font-light nav__link">By the Numbers</a></li>
                             <li class="nav__item"><a href="#" class="font-light nav__link">Our accomplishments</a></li>
-                            <li class="nav__item"><a href="services.html" class="font-light nav__link">Our Services</a></li>
+                            <li class="nav__item active"><a href="#" class="font-light nav__link">Our Services</a></li>
                             <li class="nav__item"><a href="#" class="button button-color">Download the report</a></li>
                         </ul>
                     </div>
@@ -40,22 +41,15 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-xl-5">
                         <div class="grid-gallery">
-                            <div class="grid-col">
-                                <img src="assets/img/home_page/hp5.png" alt="" width="287" height="646" class="grid-image">
-                            </div>
-                            <div class="grid-col">
-                                <img src="assets/img/home_page/hp6.png" alt="" width="238" height="256" class="grid-image">
-                                <img src="assets/img/home_page/hp10.png" alt="" width="238" height="371" class="grid-image">
-                            </div>
+                            <img src="assets/img/services_page/Services.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-7">
                         <div class="offset-left">
                             <div class="screen-first__data-after section__data ">
-                                <h3 class="section__subtitle">Annual Report 2020</h3>
-                                <h1 class="section__title">Unprecedented Times. Impactful Results.</h1>
+                                <h1 class="section__title">Our Services</h1>
                                 <p class="section__text">
-                                    Despite the challenges 2020 threw our way, we came together to help our manufacturing community become stronger than ever.
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et.                                    <br>
                                 </p>
                             </div>
                         </div>
@@ -65,65 +59,89 @@
             <div id="arrow-nextPage" class="arrow-nextPage">
             </div>
         </section>
-    <section id="screen-advantages" class="screen screen-advantages">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 screen-advantages__card people">
-                        <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">People</h3>
-                            <p class="screen-advantages__text">
-                                At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 screen-advantages__card products">
-                        <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">Products</h3>
-                            <p class="screen-advantages__text">
-                                At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 screen-advantages__card process">
-                        <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">Process</h3>
-                            <p class="screen-advantages__text">
-                                At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 screen-advantages__card technologies">
-                        <div class="screen-advantages__data">
-                            <h3 class="screen-advantages__title">Technologies</h3>
-                            <p class="screen-advantages__text">
-                                At Catalyst Connection, our goal is to help companies power the potential of their people. Through various organizational development services, we can help your organization with employee engagement, coaching, teambuilding, leadership development and succession planning.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <section id="screen-right-image" class="screen screen-right-image">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center ">
-                    <div class="col-md-6">
-                        <h3 class="section__subtitle">By the Numbers</h3>
-                        <h1 class="section__title">We rose <br> to the <br>challenge.</h1>
+    <section id="screen-people" class="screen screen-people screen-slider">
+        <div class="container-fluid my px-lg-0">
+            <div class="row ms-lg-0 w-100 ">
+                <div class="col-lg-6 ps-lg-0 col-12 tab-content">
+                    <div id="overview" role="tabpanel" class="tab-pane section__data fade show active">
+                        <h3 class="section__title small">Powering Potential of Your People</h3>
+                        <a href="#" class="section__more">More Info ></a>
                         <p class="section__text">
-                            COVID-19 turned our world upside down. Supply chains were disrupted. Jobs were lost. But we still managed to rise to the challenge and overcome many obstacles during a turbulent year. From securing grants for local manufacturers impacted by the pandemic, to creating new training opportunities to upskill new and incumbent workers, we are proud of all that we accomplished and humbled to share these accomplishments with you through our annual report.                            </p>
-                        <a href="" class="button button-light">LEARN MORE</a>
+                            <span>The world’s most successful organizations get superior business results by doing two simple things exceptionally well:</span>
+                        <ul class="section__list">
+                            <li class="section__item">They build effective programs to select, develop, and retain talent.</li>
+                            <li class="section__item">They engage, and invest in, all employees —from the executive suite to the shop floor —by giving them tools for solving problems and taking ownership of their roles.</li>
+                        </ul>
+                        </p>
                     </div>
-                    <div class="col-md-6 screen-right-image__img">
-                        <div class="screen-right-image__img-big">
-                            <img src="assets/img/home_page/hp4.png" alt="" width="582" height="518" class="grid-image">
+                    <div id="testimonials" role="tabpanel" class="tab-pane section__data fade">
+                        <h3 class="section__title small">Powering Potential of Your People</h3>
+                        <a href="#" class="section__more">More Info ></a>
+                        <p class="section__text">
+                            <span>The world’s most successful organizations get superior business results by doing two simple things exceptionally well:</span>
+                        <ul class="section__list">
+                            <li class="section__item">They build effective programs to select, develop, and retain talent.</li>
+                            <li class="section__item">They engage, and invest in, all employees —from the executive suite to the shop floor —by giving them tools for solving problems and taking ownership of their roles.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div id="whatsNew" role="tabpanel" class="tab-pane section__data fade">
+                        <h3 class="section__title small">Powering Potential of Your People</h3>
+                        <a href="#" class="section__more">More Info ></a>
+                        <p class="section__text">
+                            <span>The world’s most successful organizations get superior business results by doing two simple things exceptionally well:</span>
+                        <ul class="section__list">
+                            <li class="section__item">They build effective programs to select, develop, and retain talent.</li>
+                            <li class="section__item">They engage, and invest in, all employees —from the executive suite to the shop floor —by giving them tools for solving problems and taking ownership of their roles.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-lg-0">
+                    <div class="nav-pills">
+                        <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-pills-btn active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">overview</button>
+                            <button class="nav-pills-btn"  id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#testimonials" type="button" role="tab" aria-controls="testimonials" aria-selected="false">testimonials</buttona>
+                                <button class="nav-pills-btn"  id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#whatsNew" type="button" role="tab" aria-controls="whatsNew" aria-selected="false">What’s new?</button>
                         </div>
-                        <div class="screen-right-image__img-small">
-                            <img src="assets/img/home_page/hp3.png" alt="" width="245" height="160" class="grid-image">
-                        </div>
+                        <h4 class="nav-pills-title">People</h4>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slider__card">
+                        <h4 class="slider__title">Lorem Ipsum Headline2</h4>
+                        <p class="slider__text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                        </p>
+                    </div>
+                    <div class="slider__card">
+                        <h4 class="slider__title">Lorem Ipsum Headline2</h4>
+                        <p class="slider__text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                        </p>
+                    </div>
+                    <div class="slider__card">
+                        <h4 class="slider__title">Lorem Ipsum Headline2</h4>
+                        <p class="slider__text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                        </p>
+                    </div>
+                </div>
+                <div  class="dots-list"></div>
+            </div>
+        </div>
+    </section>
+    <section class="screen-nextPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="section__title"><a href="#">Download the 2020 Annual Report</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="scrolling__section">
             <ul class="scrolling__list">
                 <li><a href="#screen-first" class="scrolling-item active"></a></li>
@@ -147,7 +165,7 @@
                         <li class="nav__item footer-item"><a href="about.html" class="font-light footer-link">About Us</a></li>
                         <li class="nav__item footer-item"><a href="#" class="font-light footer-link">By the Numbers</a></li>
                         <li class="nav__item footer-item"><a href="#" class="font-light footer-link">Our accomplishments</a></li>
-                        <li class="nav__item footer-item"><a href="services.html" class="font-light footer-link">Our Services</a></li>
+                        <li class="nav__item footer-item"><a href="#" class="font-light footer-link">Our Services</a></li>
                         <li class="nav__item footer-item"><a href="#" class="font-light footer-link">Download the report</a></li>
                     </ul>
                 </div>
@@ -220,8 +238,10 @@
 
 
         <!--========== BOOTSTRAP ==========-->
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
     </body>
 </html>
 

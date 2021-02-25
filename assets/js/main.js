@@ -17,38 +17,12 @@ jQuery(function($) {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+        slidesToShow: 1,
         }
       },
     ]
   });
 });
-let slider = document.querySelector('#screen-what-next .container-slider');
-if(slider) {
-  let sliderpreviousElementSibling = slider.previousElementSibling;
-  let leftMargin = sliderpreviousElementSibling.currentStyle || window.getComputedStyle(sliderpreviousElementSibling);
-  if(window.innerWidth >= 992) {
-    slider.style.marginLeft = leftMargin.marginLeft;
-    slider.style.paddingLeft = leftMargin.paddingLeft;
-    slider.style.marginRight = 0;
-  }else {
-    slider.classList.remove('container-slider')
-    slider.classList.add('container')
-    slider.style.marginLeft = 'auto';
-  }
-  window.addEventListener(`resize`, event => {
-    if(window.innerWidth >= 992) {
-      slider.style.marginLeft = leftMargin.marginLeft;
-      slider.style.marginRight = 0;
-      slider.classList.add('container-slider')
-      slider.classList.remove('container')
-    } else {
-      slider.classList.remove('container-slider')
-      slider.classList.add('container')
-      slider.style.marginLeft = 'auto';
-      slider.style.marginRight = 'auto';
-    }
-  }, false);
-}
+
 
 

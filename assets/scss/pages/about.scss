@@ -57,8 +57,7 @@
       z-index: 1;
     }
   }
-  &-what-next {
-    background-image: url("../img/about_page/about_bg.jpg");
+  &-slider {
     background-repeat: no-repeat;
     background-position-x: right;
     padding-top: 124px;
@@ -90,7 +89,6 @@
         padding-right: 67px;
         padding-top: 65px;
         padding-bottom: 75px;
-        //max-width: 565px;
         margin-right: 27px;
       }
       &__title {
@@ -98,6 +96,9 @@
       }
 
     }
+  }
+  &-what-next {
+    background-image: url("../img/about_page/about_bg.jpg");
   }
   &-left-image {
     background: $gradient-side-image;
