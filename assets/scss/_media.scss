@@ -110,6 +110,12 @@
         }
       }
     }
+    &-what-next {
+      background: none;
+      .container-slider {
+        margin-left: 0!important;
+      }
+    }
     &-right-image {
       height: auto;
       min-height: auto;

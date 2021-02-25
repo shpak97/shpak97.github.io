@@ -28,7 +28,6 @@ img{
   max-width: 100%;
   height: auto;
 }
-.slick-list{padding:0 59px 0 0;}
 
 
 /*========== COMPONENTS ==========*/
@@ -174,5 +173,7 @@ img{
 @import "pages/contact";
 /*========== POPUP ==========*/
 @import "popaps";
+/*========== SLIDER ==========*/
+@import "slider";
 /*========== MEDIA ==========*/
 @import "media";
