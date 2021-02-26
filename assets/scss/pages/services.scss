@@ -1,6 +1,48 @@
 .screen {
+  &.left {
+    background-position-x: left;
+    .nav-pills {
+      margin-left: 0;
+      &-btn {
+        padding-right: 25px;
+        padding-left: 6px;
+        &.active {
+          &:before {
+            left: initial;
+            top: 47%;
+            right: 0;
+          }
+        }
+      }
+    }
+
+  }
+  &.right {
+    background-position-x: right;
+  }
   &-people {
     background-image: url("../img/services_page/Group 456.jpg");
+    .slider {
+      &__card {
+        padding-left: 49px;
+      }
+    }
+  }
+  &-process {
+     background-image: url("../img/services_page/Group 457.jpg");
+     .slider {
+       &__card {
+         padding-left: 51px;
+       }
+     }
+   }
+  &-product {
+    background-image: url("../img/services_page/Group 458.jpg");
+    .slider {
+      &__card {
+        padding-left: 69px;
+      }
+    }
   }
   .nav {
     &-pills {
@@ -55,3 +97,84 @@
     }
   }
 }
+.slider {
+  &__title {
+    &.block {
+      display: inline-block;
+      font-family: $font-text;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: 0px;
+      color: #2E2E2E;
+      margin-bottom: 20px;
+      margin-top: 6px;
+    }
+  }
+  &__list {
+    list-style: disc;
+    padding-left: 16px;
+    &.block {
+      font-weight: bold;
+    }
+  }
+  &__button {
+    margin-top: 20px;
+  }
+  &__text {
+    font-family: $font-text;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    &.author {
+      font-weight: bold;
+      font-style: italic;
+    }
+    &.quote {
+      &-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+    &.subtitle {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &.block {
+      font-weight: bold;
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-title;
+    font-size: 22px;
+    line-height: 23px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    background: $gradient-slider-number;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+  }
+  &__block {
+    margin-bottom: 25px;
+  }
+}
+#overview-process,#testimonials-process {
+    .slick-list{padding:0 60px 0 0;}
+    .slider {
+      &__card {
+        max-width: 839px!important;
+      }
+    }
+  }
+
