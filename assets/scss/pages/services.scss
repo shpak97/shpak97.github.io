@@ -44,12 +44,35 @@
       }
     }
   }
+  &-advanced-manufacturing-technologies {
+    background: url("../img/services_page/Group 459.jpg"), linear-gradient(130deg, #44B51F 0%, #55BB23 68%, #F9F74B 100%);
+    background-size: 550px 100%, 100% !important;
+    background-repeat: no-repeat;
+    .section {
+      &__title, &__text {
+        color: #ffffff;
+      }
+      &__title {
+        max-width: 380px;
+        margin-left: 0;
+      }
+      &__text {
+        max-width: 575px;
+      }
+    }
+    .col-my {
+      max-width: 605px;
+    }
+  }
+  &-talent-pipeline {
+    background-image: url("../img/services_page/Group 460.jpg");
+  }
   .nav {
     &-pills {
       display: flex;
+      align-items: center;
       max-width: 550px;
       margin-left: auto;
-      align-items: start;
       padding-top: 25px;
       padding-bottom: 25px;
       background: #273f999c;
@@ -83,8 +106,9 @@
       }
       &-title {
         display: block;
-        margin-left: auto;
+        margin-left: 100px;
         margin-right: auto;
+        margin-bottom: 0;
         align-self: center;
         font-family: $font-title;
         font-size: 30px;
@@ -110,6 +134,15 @@
       color: #2E2E2E;
       margin-bottom: 20px;
       margin-top: 6px;
+    }
+    &.quote {
+      font-family: $font-title;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: bold;
+      color: #2E2E2E;
+      letter-spacing: 0;
+      margin-bottom: 20px;
     }
   }
   &__list {
@@ -138,6 +171,9 @@
       &-title {
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 25px;
+      }
+      &.testimonials-product {
         margin-bottom: 25px;
       }
     }
@@ -170,11 +206,114 @@
   }
 }
 #overview-process,#testimonials-process {
-    .slick-list{padding:0 60px 0 0;}
-    .slider {
-      &__card {
-        max-width: 839px!important;
-      }
+  .slick-list{padding:0 60px 0 0;}
+  .slider {
+    &__card {
+      max-width: 839px!important;
     }
   }
+}
+#testimonials-product {
+  .slider {
+    &__card {
+      max-width: 819px !important;
+    }
+  }
+}
+#screen-advanced-manufacturing-technologies {
+  .slick-dots {
+    position: absolute;
+    right: 293px;
+    li {
+      border-color: #ffffff;
+    }
+  }
+  #overview-advanced-manufacturing-technologies {
+    .slick-track {
+      height: 443px;
+    }
+    .slider {
+      &__card {
+        max-width: 563px !important;
+      }
+    }
+    .dots-list {
+      position: relative;
+      height: 24px;
+    }
+  }
+}
+#screen-talent-pipeline {
+  .section {
+    &__title {
+      max-width: 380px;
+      margin-left: 0;
+      margin-top: 0;
+      &.white {
+        font-size: 40px !important;
+        line-height: 40px !important;
+        font-weight: bold;
+        color: #FFFFFF;
+        margin-bottom: 100px;
+        margin-left: 60px;
+      }
+    }
+    &__text {
+      max-width: 496px;
+    }
+    &__data {
+      margin-bottom: 0;
+    }
+  }
+  .title-col {
+    width: 550px;
+  }
+  .nav-pills {
+    width: 550px;
+    height: 170px;
+  }
+}
 
+@media screen and (max-width: 992px){
+  .screen-slider {
+    &.right, &.left {
+      .my {
+        >.row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .tab-pane {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+      }
+    }
+    .nav-pills {
+      max-width: inherit;
+    }
+    &.screen-advanced-manufacturing-technologies .col-my {
+      width: 100%;
+      max-width: inherit;
+    }
+  }
+  .slick-track .slider__card {
+    max-width: 100% !important;
+  }
+  #screen-talent-pipeline .nav-pills {
+    width: 100%;
+  }
+  #overview-process{
+    .slick-track, .slick-list.draggable {
+      height: 710px !important;
+    }
+    .slider__block.row {
+      margin-bottom: 10px;
+    }
+  }
+  #overview-process .slick-list, #testimonials-process .slick-list {
+    padding: 0;
+  }
+  #screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .slider__card {
+    max-width: 100% !important;
+  }
+}

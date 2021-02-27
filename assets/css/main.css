@@ -1029,11 +1029,32 @@ img {
 .screen-product .slider__card {
   padding-left: 69px;
 }
+.screen-advanced-manufacturing-technologies {
+  background: url("../img/services_page/Group 459.jpg"), linear-gradient(130deg, #44B51F 0%, #55BB23 68%, #F9F74B 100%);
+  background-size: 550px 100%, 100% !important;
+  background-repeat: no-repeat;
+}
+.screen-advanced-manufacturing-technologies .section__title, .screen-advanced-manufacturing-technologies .section__text {
+  color: #ffffff;
+}
+.screen-advanced-manufacturing-technologies .section__title {
+  max-width: 380px;
+  margin-left: 0;
+}
+.screen-advanced-manufacturing-technologies .section__text {
+  max-width: 575px;
+}
+.screen-advanced-manufacturing-technologies .col-my {
+  max-width: 605px;
+}
+.screen-talent-pipeline {
+  background-image: url("../img/services_page/Group 460.jpg");
+}
 .screen .nav-pills {
   display: flex;
+  align-items: center;
   max-width: 550px;
   margin-left: auto;
-  align-items: start;
   padding-top: 25px;
   padding-bottom: 25px;
   background: #273f999c;
@@ -1068,8 +1089,9 @@ img {
 }
 .screen .nav-pills-title {
   display: block;
-  margin-left: auto;
+  margin-left: 100px;
   margin-right: auto;
+  margin-bottom: 0;
   align-self: center;
   font-family: "Poppins", sans-serif;
   font-size: 30px;
@@ -1091,6 +1113,15 @@ img {
   color: #2E2E2E;
   margin-bottom: 20px;
   margin-top: 6px;
+}
+.slider__title.quote {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+  color: #2E2E2E;
+  letter-spacing: 0;
+  margin-bottom: 20px;
 }
 .slider__list {
   list-style: disc;
@@ -1118,6 +1149,9 @@ img {
 .slider__text.quote-title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 25px;
+}
+.slider__text.quote.testimonials-product {
   margin-bottom: 25px;
 }
 .slider__text.subtitle {
@@ -1154,6 +1188,95 @@ img {
   max-width: 839px !important;
 }
 
+#testimonials-product .slider__card {
+  max-width: 819px !important;
+}
+
+#screen-advanced-manufacturing-technologies .slick-dots {
+  position: absolute;
+  right: 293px;
+}
+#screen-advanced-manufacturing-technologies .slick-dots li {
+  border-color: #ffffff;
+}
+#screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .slick-track {
+  height: 443px;
+}
+#screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .slider__card {
+  max-width: 563px !important;
+}
+#screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .dots-list {
+  position: relative;
+  height: 24px;
+}
+
+#screen-talent-pipeline .section__title {
+  max-width: 380px;
+  margin-left: 0;
+  margin-top: 0;
+}
+#screen-talent-pipeline .section__title.white {
+  font-size: 40px !important;
+  line-height: 40px !important;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 100px;
+  margin-left: 60px;
+}
+#screen-talent-pipeline .section__text {
+  max-width: 496px;
+}
+#screen-talent-pipeline .section__data {
+  margin-bottom: 0;
+}
+#screen-talent-pipeline .title-col {
+  width: 550px;
+}
+#screen-talent-pipeline .nav-pills {
+  width: 550px;
+  height: 170px;
+}
+
+@media screen and (max-width: 992px) {
+  .screen-slider.right .my > .row, .screen-slider.left .my > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .screen-slider.right .my .tab-pane, .screen-slider.left .my .tab-pane {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .screen-slider .nav-pills {
+    max-width: inherit;
+  }
+  .screen-slider.screen-advanced-manufacturing-technologies .col-my {
+    width: 100%;
+    max-width: inherit;
+  }
+
+  .slick-track .slider__card {
+    max-width: 100% !important;
+  }
+
+  #screen-talent-pipeline .nav-pills {
+    width: 100%;
+  }
+
+  #overview-process .slick-track, #overview-process .slick-list.draggable {
+    height: 710px !important;
+  }
+  #overview-process .slider__block.row {
+    margin-bottom: 10px;
+  }
+
+  #overview-process .slick-list, #testimonials-process .slick-list {
+    padding: 0;
+  }
+
+  #screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .slider__card {
+    max-width: 100% !important;
+  }
+}
 .screen-industries .section__title::after {
   display: none;
 }
