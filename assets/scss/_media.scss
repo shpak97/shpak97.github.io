@@ -348,27 +348,11 @@
 }
 
 //Mobile first
-@media  screen and (min-width: 540px) {
-  .container-fluid.my{
-    margin-left: auto;
-    width: 100%;
-  }
-}
-@media  screen and (min-width: 768px) {
-  .container-fluid.my{
-    width: calc(100% - (50% - 360px));
-  }
-}
-@media  screen and (min-width: 992px) {
-  .container-fluid.my{
-    margin-left: calc(50% - 480px);
-    width: calc(100% - (50% - 480px));
-  }
-}
 @media screen and  (min-width: 1200px) {
-  .container-fluid.my{
+  .container.my{
     margin-left: calc(50% - 570px);
     width: calc(100% - (50% - 570px));
+    max-width: inherit;
   }
   .screen {
     .section {
@@ -417,8 +401,9 @@
   }
 }
 @media  screen and (min-width: 1400px) {
-  .container-fluid.my{
+  .container.my{
     margin-left: calc(50% - 620px);
     width: calc(100% - (50% - 620px));
+    max-width: inherit;
   }
 }

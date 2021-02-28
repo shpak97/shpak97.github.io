@@ -205,21 +205,6 @@
     margin-bottom: 25px;
   }
 }
-#overview-process,#testimonials-process {
-  .slick-list{padding:0 60px 0 0;}
-  .slider {
-    &__card {
-      max-width: 839px!important;
-    }
-  }
-}
-#testimonials-product {
-  .slider {
-    &__card {
-      max-width: 819px !important;
-    }
-  }
-}
 #screen-advanced-manufacturing-technologies {
   .slick-dots {
     position: absolute;
@@ -231,11 +216,6 @@
   #overview-advanced-manufacturing-technologies {
     .slick-track {
       height: 443px;
-    }
-    .slider {
-      &__card {
-        max-width: 563px !important;
-      }
     }
     .dots-list {
       position: relative;
@@ -273,7 +253,68 @@
     height: 170px;
   }
 }
-
+@media screen and (max-width: 1200px) {
+  #screen-people, #screen-product, #screen-process, #screen-advanced-manufacturing-technologies, #screen-talent-pipeline {
+    background: $gradient-slider-number;
+    background-size: 100% !important;
+    .section {
+      &__title, &__more, &__text, &__item {
+        color: #FFFFFF;
+        max-width: inherit;;
+      }
+      &__data {
+        margin-bottom: 25px;
+      }
+    }
+    }
+  .nav-pills {
+      max-width: inherit !important;
+    }
+  .screen-advanced-manufacturing-technologies .col-my {
+    max-width: inherit;
+  }
+  .slider {
+    .slick-list {
+      padding: 0 !important;
+    }
+  }
+  .screen-slider .tab-content .slider__card {
+    max-width: inherit !important;
+    margin-right: 0;
+    height: 100%;
+  }
+  .slick-dots {
+    position: absolute !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+  .dots-list {
+    position: relative;
+    height: 24px;
+  }
+  .screen-slider .arrow-nextSlide {
+    display: none !important;
+  }
+  .nav-pills-title {
+    margin: 0 auto;
+  }
+  #screen-talent-pipeline{
+    .nav-pills {
+      height: auto;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .title-col {
+      width: inherit;
+    }
+    .section__title {
+      margin-bottom: 25px !important;
+      margin-left: 0 !important;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
 @media screen and (max-width: 992px){
   .screen-slider {
     &.right, &.left {
@@ -298,6 +339,7 @@
   }
   .slick-track .slider__card {
     max-width: 100% !important;
+    min-height: 100%;
   }
   #screen-talent-pipeline .nav-pills {
     width: 100%;
@@ -315,5 +357,40 @@
   }
   #screen-advanced-manufacturing-technologies #overview-advanced-manufacturing-technologies .slider__card {
     max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px){
+.screen .nav-pills-title {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  br {
+    display: none;
+  }
+}
+}
+@media screen and (min-width: 1200px){
+  #overview-process,#testimonials-process {
+    .slick-list{padding:0 60px 0 0;}
+    .slider {
+      &__card {
+        max-width: 839px!important;
+      }
+    }
+  }
+  #overview-advanced-manufacturing-technologies {
+    .slider {
+      &__card {
+        max-width: 563px !important;
+      }
+    }
+  }
+  #testimonials-product {
+    .slider {
+      &__card {
+        max-width: 819px !important;
+      }
+    }
   }
 }
