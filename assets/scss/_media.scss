@@ -24,6 +24,11 @@
     }
   }
 }
+@media screen  and (max-width: 1200px) {
+  .screen-first .grid-gallery {
+    padding-top: 0;
+  }
+}
 @media screen and  (max-width: 992px) {
   .footer {
     &-list {
@@ -388,9 +393,14 @@
     position: absolute;
     top: 0;
     left: 0;
+    height: 160px;
     .navbar {
-      padding-top: 8px;
+      padding-top: 40px;
       padding-bottom: 8px;
+    }
+    &-blog {
+      position: relative;
+      min-height: 160px;
     }
   }
   .nav {

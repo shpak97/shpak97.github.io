@@ -3,6 +3,17 @@
   position: relative;
   width: 100%;
   z-index: 99999;
+  &-blog {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 443px;
+      height: 160px;
+      background: $gradient-header-blog;
+    }
+  }
   .container {
     max-width: 1484px;
   }
