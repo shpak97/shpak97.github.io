@@ -1,6 +1,6 @@
 .form{
   &-wrapper{
-    max-width: 1166px;
+    max-width: $container-width;
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 0 20px #00000029;
     &:after{
@@ -9,7 +9,7 @@
       width: 196px;
       height: 196px;
       position: absolute;
-      background: #DDDDDD url("../../img/hp9.png") center no-repeat;
+      background: #DDDDDD url("../img/hp9.png") center no-repeat;
       background-size: 100%;
       right: -18px;
       bottom: -18px;
@@ -31,7 +31,6 @@
   }
   &-wrap-form{
     padding: 112px 67px 25px;
-    flex: 0 0 758px;
     max-width: 758px;
   }
   &-input{
@@ -56,9 +55,8 @@
   }
   &-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 21px 14px;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-gap: 30px;
   }
   &-btn{
     max-width: 270px;

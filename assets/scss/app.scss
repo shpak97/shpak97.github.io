@@ -66,6 +66,12 @@ img{
     font-style: normal;
     text-align: left;
     color: #333333;
+    &-small {
+      max-width: 510px !important;
+      font-size: 16px !important;
+      line-height: 23px !important;
+      margin-bottom: 25px !important;
+    }
   }
   &__list {
     list-style: disc;
@@ -100,10 +106,11 @@ img{
   letter-spacing: 1.2px;
   text-align: center;
   padding: 14px 22px;
-  width: 212px;
+  width: 215px;
   user-select: none;
   text-decoration: none;
   vertical-align: middle;
+  text-transform: uppercase;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   &-light {
     border: 1px solid #707070;

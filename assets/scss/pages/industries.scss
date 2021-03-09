@@ -21,7 +21,7 @@
 
   &__block-gradient {
     max-width: 376px;
-    padding: 24px 16px 32px 30px;
+    padding: 24px 4px 32px 18px;
     background: $gradient-industries;
     font-family: $font-title;
     font-weight: bold;
@@ -81,12 +81,29 @@
   padding-top: 65px;
   background: $gradient-industries-funding;
 
+  &__first-cell{
+    width: 50%;
+  }
   .prev, .next {
     width: 30px;
-    height: 26px;
+    height: 30px;
     top: -95px;
   }
-
+  .yellow-text{
+    font-size: 18px;
+    line-height: 49px;
+    letter-spacing: 3.6px;
+    color: #F8F74B;
+    transform: rotate(-90deg);
+    &_top{
+      left: -109px;
+      top: 86px;
+    }
+    &_bot{
+      left: -141px;
+      top: 61px;
+    }
+  }
   .wrap-btn {
     width: 100%;
     height: 30px;
@@ -99,23 +116,25 @@
   }
   .next, .prev{
     top: calc(50% - 9px);
+    cursor: pointer;
   }
   .next {
-    left: calc(50% - 560px);
-    background: url("../../img/industries_page/arrow-left-solid.svg") center no-repeat;
+    right: calc(50% - 560px);
+    background: url("../img/industries_page/arrow-right-solid.svg") center no-repeat;
   }
 
   .prev {
-    right: calc(50% - 560px);
-    background: url("../../img/industries_page/arrow-right-solid.svg") center no-repeat;
+    left: calc(50% - 560px);
+    background: url("../img/industries_page/arrow-left-solid.svg") center no-repeat;
   }
 
   &_container {
-    max-width: $container-width;
+    max-width: 1300px;
     margin: 0 auto;
   }
 
   &__slide {
+    max-width: 1166px;
     &-caption {
       font-size: 18px;
     }
@@ -166,36 +185,69 @@
     font-size: 18px;
     line-height: 35px;
     color: #fff;
-  }
-
-  &-right {
-    font-weight: bold;
-  }
-
-  &-row {
     padding: 0 9px;
     &:nth-of-type(odd) {
       background: #5FB225;
     }
+    &-group{
+      display: table-row-group;
+    }
+  }
+  &-right {
+    font-weight: bold;
   }
 }
 
 .head {
   border-bottom: 1px solid #fff;
   font-family: $font-title;
+  padding-bottom: 16px;
 }
 
 .multiple-items {
   padding-bottom: 175px;
+  &__container{
+    max-width: $container-width;
+    margin: 0 auto;
+  }
   &__slide {
     //max-width: $container-width;
   }
 }
 
-
 .clients{
   margin-top: 65px;
   &__container{
+    .wrap-btn{
+      width: 111%;
+      height: 26px;
+      top: calc(50% - 13px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .prev{
+      left: 0;
+    }
+    .next{
+      right: 0;
+    }
+    .next, .prev{
+      width: 30px;
+      height: 26px;
+      svg{
+        path{
+          transition: .3s;
+          cursor: pointer;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: #64BD23;
+          }
+        }
+      }
+    }
     max-width: $container-width;
     &.form-wrapper{
       &:after{
@@ -204,15 +256,31 @@
     }
   }
   &__head{
-    background: $gradient-industries-funding;
-    padding: 42px 15px 27px 45px;
+    background: $gradient-screen-clients;
+    padding: 37px 119px 37px 45px;
     color: #fff;
     font-family: $font-title;
     font-weight: bold;
     font-size: 30px;
     line-height: 49px;
+    .slick-slider-dots{
+      .slick-dots{
+        li{
+          font-size: 18px;
+          margin-left: 60px;
+          opacity: .7;
+          &.slick-active {
+            opacity: 1;
+          }
+        }
+        position: static !important;
+        &:first-of-type{
+          display: none !important;
+        }
+      }
+    }
   }
-  &__row{
+  &__body{
 
   }
   &__col{
@@ -228,7 +296,6 @@
   }
 }
 
-
 .accomplished-together {
   background: $gradient-industries-funding;
   text-align: center;
@@ -243,4 +310,26 @@
     font-size: 43px;
     line-height: 70px;
   }
+}
+
+.p{
+  &l{
+    &-0{
+      padding-left: 0;
+    }
+    &-2{
+      padding-left: 9px;
+    }
+  }
+  &r{
+    &-0{
+      padding-right: 0;
+    }
+    &-2{
+      padding-right: 9px;
+    }
+  }
+}
+.text-right{
+  text-align: right;
 }

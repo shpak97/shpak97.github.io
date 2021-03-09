@@ -64,6 +64,13 @@
         width: 90%;
         background-color: $first-color;
       }
+      &-btn {
+        &:after {
+          bottom: 8px;
+          background-color: #ffffff;
+          width: 163px;
+        }
+      }
     }
   }
   &__item+&__item {
