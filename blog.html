@@ -26,10 +26,13 @@
                 <div class="nav__menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="about.html" class="font-light nav__link">About Us</a></li>
-                        <li class="nav__item"><a href="industries.html" class="font-light nav__link">By the Numbers</a></li>
-                        <li class="nav__item active"><a href="#" class="font-light nav__link">Our accomplishments</a></li>
+                        <li class="nav__item"><a href="industries.html" class="font-light nav__link">By the Numbers</a>
+                        </li>
+                        <li class="nav__item active"><a href="#" class="font-light nav__link">Our accomplishments</a>
+                        </li>
                         <li class="nav__item"><a href="services.html" class="font-light nav__link">Our Services</a></li>
-                        <li class="nav__item"><a href="contact.html" class="button button-color">Download the report</a></li>
+                        <li class="nav__item"><a href="contact.html" class="button button-color">Download the report</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,119 +57,460 @@
                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         FILTER
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul id="filter-btns" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item filter-btns__item activeFilterBtn" href="#" onclick="filterSelection('all')">All</a></li>
+                        <li><a class="dropdown-item filter-btns__item" href="#" onclick="filterSelection('catalystConnection')">Catalyst Connection News</a></li>
+                        <li><a class="dropdown-item filter-btns__item" href="#" onclick="filterSelection('relatedResource')">COVID-19 Related Resource</a></li>
+                        <li><a class="dropdown-item filter-btns__item" href="#" onclick="filterSelection('covidNews')">COVID-19 News</a></li>
                     </ul>
                 </div>
                 <div class="screen-filter-month col-md-9">
                     <ul class="screen-filter-month__list d-flex">
-                        <li class="screen-filter-month__item">jan</li>
-                        <li class="screen-filter-month__item">feb</li>
-                        <li class="screen-filter-month__item">mar</li>
-                        <li class="screen-filter-month__item">apr</li>
-                        <li class="screen-filter-month__item">may</li>
-                        <li class="screen-filter-month__item">jun</li>
-                        <li class="screen-filter-month__item">jul</li>
-                        <li class="screen-filter-month__item">aug</li>
-                        <li class="screen-filter-month__item">sept</li>
-                        <li class="screen-filter-month__item">oct</li>
-                        <li class="screen-filter-month__item">nov</li>
-                        <li class="screen-filter-month__item">dec</li>
+                        <li data-month-to="0" class="screen-filter-month__item">jan</li>
+                        <li data-month-to="1" class="screen-filter-month__item">feb</li>
+                        <li data-month-to="2" class="screen-filter-month__item">mar</li>
+                        <li data-month-to="3" class="screen-filter-month__item">apr</li>
+                        <li data-month-to="4" class="screen-filter-month__item">may</li>
+                        <li data-month-to="5" class="screen-filter-month__item">jun</li>
+                        <li data-month-to="6" class="screen-filter-month__item">jul</li>
+                        <li data-month-to="7" class="screen-filter-month__item">aug</li>
+                        <li data-month-to="8" class="screen-filter-month__item">sept</li>
+                        <li data-month-to="9" class="screen-filter-month__item">oct</li>
+                        <li data-month-to="10" class="screen-filter-month__item">nov</li>
+                        <li data-month-to="11" class="screen-filter-month__item">dec</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div id="blog-slider" class="blog-slider">
                     <div class="slider position-relative">
-                        <div class="slider__blog-card">
+                        <!--JAN-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">JAN 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
                             <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
                                 <div>
-                                    <img src="assets/img/blog_page/Rectangle%20304.png" alt="">
+                                    <img src="assets/img/blog_page/Timeline_Images/1.jpg" alt="">
                                     <p class="mt-4">
-                                        Catalyst Connection begins weekly communications and releases the Back-to-Work
-                                        Playbook. Download the Back-to-Work Playbook here.
+                                        Cataylst Connection started the new year in our Hazelwoof Green Mill 19 space, co-located with Carnegie Mellon University (CMU) and Advanced Robotics in Manufacturing (ARM).
                                     </p>
                                 </div>
-                                <a class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                <a href="https://www.catalystconnection.org/news-blog/catalyst-connection-is-moving-to-hazelwood-green/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
                                     News</a>
                             </div>
                         </div>
-                        <div class="slider__blog-card">
+                        <div class="slider__blog-card covidNews">
                             <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
                                 <div>
-                                    <img src="assets/img/blog_page/Rectangle%20304.png" alt="">
+                                    <img src="assets/img/blog_page/Timeline_Images/2.jpg" alt="">
                                     <p class="mt-4">
-                                        Catalyst Connection’s regional Explore the New Manufacturing Student Video
-                                        Contests
-                                        are moved to a virtual platform:
+                                        First COVID-19 case was confirmed in the United States.
                                     </p>
-                                    <ul>
-                                        <li>Pittsburgh North Contest</li>
-                                        <li>Pittsburgh East Contest</li>
-                                    </ul>
-
                                 </div>
-                                <a class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                <a href="https://www.catalystconnection.org/about-us/covid-19-resources-for-manufacturers-2/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
                                     News</a>
                             </div>
                         </div>
+                        <!--FEB-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">FEB 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card covidNews">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/3.jpg" alt="">
+                                    <p class="mt-4">
+                                        The World Health Organization (W.H.O.) proposed an official name for the disease the virus causes: COVID-19.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/about-us/covid-19-resources-for-manufacturers-2/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/4.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection held its Annual Manufacturing Reception and Student Video Contest at NOVA Place.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/recap-of-the-2020-catalyst-connection-annual-manufacturing-reception/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--MAR-->
                         <div class="slider__blog-date">
                             <div class="slider__blog-date-body">
                                 <div class="date">MAR 2021</div>
                             </div>
                         </div>
-                        <div class="slider__blog-card">
+                        <div class="slider__blog-card covidNews">
                             <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
                                 <div>
-                                    <img src="assets/img/blog_page/Rectangle%20304.png" alt="">
+                                    <img src="assets/img/blog_page/Timeline_Images/5.jpg" alt="">
                                     <p class="mt-4">
-                                        Catalyst Connection begins weekly communications and releases the Back-to-Work
-                                        Playbook. Download the Back-to-Work Playbook here.
+                                        Catalyst Connection moved to an all-virtual environment, as Pennsylvania Governor Tom Wolf issues statewide stay-at-home order.
                                     </p>
                                 </div>
-                                <a class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                <a href="https://www.catalystconnection.org/about-us/covid-19-resources-for-manufacturers-2" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/6.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection's regional Explore the New Manufacturing Student Video contests were moved to a virtual platform.
+                                    </p>
+                                </div>
+                                <a href="https://www.youtube.com/playlist?list=PL1Yn6mNm7PyUjcqEd3uWQQWe07LPhgb2m" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
                                     News</a>
                             </div>
                         </div>
-                        <div class="slider__blog-card">
-                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
-                                <div>
-                                    <img src="assets/img/blog_page/Rectangle%20304.png" alt="">
-                                    <p class="mt-4">
-                                        Catalyst Connection’s regional Explore the New Manufacturing Student Video
-                                        Contests
-                                        are moved to a virtual platform:
-                                    </p>
-                                    <ul>
-                                        <li>Pittsburgh North Contest</li>
-                                        <li>Pittsburgh East Contest</li>
-                                    </ul>
-
-                                </div>
-                                <a class="button button-light slider__button w-100 align-self-end">Catalyst Connection
-                                    News</a>
-                            </div>
-                        </div>
-                        <div class="slider__blog-card">
-                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
-                                <div>
-                                    <img src="assets/img/blog_page/Rectangle%20304.png" alt="">
-                                    <p class="mt-4">
-                                        Launched Peer Network Virtual Meetings Peer Network HR Peer Network Group •
-                                        Catalyst
-                                        Connection recognized the pressures Human Resource (HR) professionals were
-                                        experiencing due to the uncertainty of… READ MORE…
-                                    </p>
-                                </div>
-                                <a class="button button-light slider__button w-100 align-self-end">Catalyst Connection
-                                    News</a>
-                            </div>
-                        </div>
+                        <!--APR-->
                         <div class="slider__blog-date">
                             <div class="slider__blog-date-body">
                                 <div class="date">APR 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/7.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection launched Peer Network Virtual Meetings
+                                    <ul class="mt-2">
+                                        <li>HR Peer Network Group</li>
+                                        <li>Lean Peer Network Group</li>
+                                        <li>Women in Leadership Group</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/training-courses/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/8.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection began weekly communications and releases the Back-to-Work Playbook.
+                                    </p>
+                                </div>
+                                <a href="https://go.catalystconnection.org/back-to-work-playbook" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--MAY-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">MAY 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/9.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection, in partnership with Blue Water Growth and Meyer, Unkovic & Scott, published the “De-Risk Your Supply Chain” E-book.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/workforce-resources/publications-ebooks/supply-chain-ebook/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/10.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection hosted “How Covid-19 Will Trigger Global Supply Chain Realignment…and What To Do About It” webinar, along with third-party partner, Blue Water Growth.
+                                    </p>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=B5GNh0kwNKE" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/11.jpg" alt="">
+                                    <p class="mt-4">
+                                        The Emerging Leaders in Manufacturing Program moved to virtual delivery.
+                                    </p>
+                                </div>
+                                <a href="services.html#screen-people" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--JUNE-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">JUN 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/12.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection received CARES Act funding to support manufacturers recover from COVID-19 interruptions, access resources at all levels, and come together through peer groups.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/advanced-manufacturing-certification-program-offered-to-pittsburgh-small-businesses-recovering-from-pandemic/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/13.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection published “COVID Recovery Assistance for Manufacturers” E-book.
+                                    </p>
+                                </div>
+                                <a href="http://go.catalystconnection.org/covid19services" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/14.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection released a statement on Juneteenth.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/commemorating-juneteenth/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--JULE-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">JUL 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card covidNews">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/15.jpg" alt="">
+                                    <p class="mt-4">
+                                        All 67 Pennsylvania counties officially moved to the “green phase” of reopening.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/about-us/covid-19-resources-for-manufacturers-2/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/16.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection published the Organizational Development Course Catalog containing ways to create a more engaged workforce.
+                                    </p>
+                                </div>
+                                <a href="http://go.catalystconnection.org/orgdev" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/17.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection released the Leadership Development Playbook.
+                                    </p>
+                                </div>
+                                <a href="http://go.catalystconnection.org/DDIleadership" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/18.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection partnered with Rhabit Analytics to establish the free COVID-19 pulse survey.
+                                    </p>
+                                </div>
+                                <a href="http://go.catalystconnection.org/rhabit" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--AUG-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">AUG 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/19.jpg" alt="">
+                                    <p class="mt-4">
+                                        The Shale POWER Initiative provides technical assistance and business support to small and medium manufacturers and enterprises.
+                                    </p>
+                                </div>
+                                <a href="https://shalepower.org/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/20.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection announced that they have received a Richard King Mellon Foundation Grant to assist manufacturers with returning to December 2019 production and economic levels.                                     </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/catalyst-connection-receives-rk-mellon-grant-to-assist-manufacturers/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--SEPT-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">SEPT 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/21.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection announced that they have received Department of Defense (DoD) funding to strengthen the defense supply chain in southwestern Pennsylvania and northern West Virginia.                                     </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/catalyst-connection-receives-dod-funding-to-strengthen-the-defense-supply-chain/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/22.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection kicked off National Manufacturing Week virtually.
+                                    </p>
+                                </div>
+                                <a href="https://makingyourfuture.org/prepare-yourself/mfg-day-2020/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/23.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection completed the Maker-to-Manufacturing (M2M) Program.
+                                    </p>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=OScE8PRFvws" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--OCT-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">OCT 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/24.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection published the “Lean Forward: Lean Manufacturing in the Time of COVID-19” E-book.
+                                    </p>
+                                </div>
+                                <a href="https://go.catalystconnection.org/leanforward" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card relatedResource">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/25.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection published the Lean Manufacturing Course Catalog. This course catalog was created to inform manufacturers of ways to improve the flow of products to shorten lead times, reduce operating costs, and improve employee success.
+                                    </p>
+                                </div>
+                                <a href="https://go.catalystconnection.org/leancourses" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/26.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection announced that they received Appalachian Regional Commission (ARC) grant to continue economic growth within coal-impacted communities.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/catalyst-connection-receives-arc-grant-to-continue-economic-growth-within-coal-impacted-communities/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--NOV-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">NOV 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/27.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection announced Advanced Manufacturing Certification Program, Operation Next, offered to Pittsburgh small businesses recovering from the pandemic.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/workforce-development/operation-next-opnext/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/28.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection would like to thank veterans everywhere for their service and dedication. In 2019, U.S. veterans made up a total of 12.9% of the manufacturing workforce.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/news-blog/veterans-day-announcement/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <!--DEC-->
+                        <div class="slider__blog-date">
+                            <div class="slider__blog-date-body">
+                                <div class="date">DEC 2021</div>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/29.jpg" alt="">
+                                    <p class="mt-4">
+                                        The AIM Higher Consortium announced new mini-grant program to help manufacturing companies enter or expand within the US Department of Defense supply chain.
+                                    </p>
+                                </div>
+                                <a href="https://www.catalystconnection.org/grants-other-cost-saving-programs/aimhigher/" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
+                            </div>
+                        </div>
+                        <div class="slider__blog-card catalystConnection">
+                            <div class="slider__blog-card-body d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <img src="assets/img/blog_page/Timeline_Images/30.jpg" alt="">
+                                    <p class="mt-4">
+                                        Catalyst Connection ended the year by serving 258 companies with COVID-19 response and recovery services.
+                                    </p>
+                                </div>
+                                <a href="industries.html#screen-impact" target="_blank" class="button button-light slider__button w-100 align-self-end">Catalyst Connection
+                                    News</a>
                             </div>
                         </div>
                     </div>
@@ -178,18 +522,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h3 class="section__title"><a href="services.html">Make an Impact with Catalyst</a></h3>
+                    <h3 class="section__title"><a href="services.html">Our Services</a></h3>
                 </div>
             </div>
         </div>
     </section>
-    <div class="scrolling__section">
-        <ul class="scrolling__list">
-            <li><a href="#screen-first" class="scrolling-item active"></a></li>
-            <li><a href="#screen-advantages" class="scrolling-item"></a></li>
-            <li><a href="#screen-right-image" class="scrolling-item"></a></li>
-        </ul>
-    </div>
 </main>
 <footer class="footer">
     <div class="container">
@@ -203,12 +540,16 @@
             </div>
             <div class="col-xxl-9 first-row d-flex justify-content-xxl-end">
                 <ul class="nav__list footer-list">
-                    <li class="nav__item footer-item"><a href="about.html" class="font-light footer-link">About Us</a></li>
-                    <li class="nav__item footer-item"><a href="industries.html" class="font-light footer-link">By the Numbers</a></li>
+                    <li class="nav__item footer-item"><a href="about.html" class="font-light footer-link">About Us</a>
+                    </li>
+                    <li class="nav__item footer-item"><a href="industries.html" class="font-light footer-link">By the
+                        Numbers</a></li>
                     <li class="nav__item footer-item"><a href="#" class="font-light footer-link">Our accomplishments</a>
                     </li>
-                    <li class="nav__item footer-item"><a href="services.html" class="font-light footer-link">Our Services</a></li>
-                    <li class="nav__item footer-item"><a href="contact.html" class="font-light footer-link">Download the report</a>
+                    <li class="nav__item footer-item"><a href="services.html" class="font-light footer-link">Our
+                        Services</a></li>
+                    <li class="nav__item footer-item"><a href="contact.html" class="font-light footer-link">Download the
+                        report</a>
                     </li>
                 </ul>
             </div>
@@ -224,13 +565,16 @@
                     <div class="footer__form-title font-light">Newsletter Signup</div>
                     <div class="footer__form">
                         <div class="footer__col">
-                            <input type="text" class="form-input form-control footer__input" placeholder="First name" aria-label="First name">
+                            <input type="text" class="form-control footer__input" placeholder="First name"
+                                   aria-label="First name">
                         </div>
                         <div class="footer__col">
-                            <input type="text" class="form-input form-control footer__input" placeholder="Last name" aria-label="Last name">
+                            <input type="text" class="form-control footer__input" placeholder="Last name"
+                                   aria-label="Last name">
                         </div>
                         <div class="footer__col">
-                            <input type="email" class="form-input form-control footer__input" placeholder="Email" aria-label="email">
+                            <input type="email" class="form-control footer__input" placeholder="Email"
+                                   aria-label="email">
                         </div>
                         <div class="footer__col">
                             <button type="submit" class="footer__btn">Submit</button>
@@ -287,8 +631,6 @@
         </div>
     </div>
 </footer>
-
-
 <!--========== BOOTSTRAP ==========-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>

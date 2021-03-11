@@ -55,24 +55,29 @@
       letter-spacing: 1.2px;
       color: #000000;
       text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &__container {
-      //max-width: 1440px;
       max-width: 100%;
     }
   }
 
 }
-
 .slider {
   &__blog {
     &-card {
+      display: none !important;
       width: 100%;
       max-width: 373px;
       height: 386px;
       border-left: 1px solid rgba(112, 112, 112, .27);
-      //border-right-width: 1px;
+      &.show {
+        display: block !important;
+      }
       &-body {
         max-width: 270px;
         margin: 0 auto;
@@ -124,7 +129,6 @@
     }
   }
 }
-
 .blog-slider {
   padding-top: 70px;
   padding-bottom: 64px;
@@ -178,4 +182,9 @@
       }
     }
   }
+}
+
+.filter-btns__item.activeFilterBtn {
+  background: transparent linear-gradient(100deg , #4ABB23 0%, #F9F74B 100%) 0% 0% no-repeat padding-box;
+  color: #ffffff;
 }

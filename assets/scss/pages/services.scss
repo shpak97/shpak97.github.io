@@ -29,13 +29,13 @@
     }
   }
   &-process {
-     background-image: url("../img/services_page/Group 457.jpg");
-     .slider {
-       &__card {
-         padding-left: 51px;
-       }
-     }
-   }
+    background-image: url("../img/services_page/Group 457.jpg");
+    .slider {
+      &__card {
+        padding-left: 51px;
+      }
+    }
+  }
   &-product {
     background-image: url("../img/services_page/Group 458.jpg");
     .slider {
@@ -230,12 +230,14 @@
       margin-left: 0;
       margin-top: 0;
       &.white {
+        width: max-content;
+        max-width: unset;
         font-size: 40px !important;
         line-height: 40px !important;
         font-weight: bold;
         color: #FFFFFF;
-        margin-bottom: 100px;
-        margin-left: 60px;
+        margin-left: auto;
+        margin-right: 70px;
       }
     }
     &__text {
@@ -252,6 +254,10 @@
     width: 550px;
     height: 170px;
   }
+  .slick-track {
+    height: auto;
+    display: flex;
+  }
 }
 @media screen and (max-width: 1200px) {
   #screen-people, #screen-product, #screen-process, #screen-advanced-manufacturing-technologies, #screen-talent-pipeline {
@@ -266,10 +272,16 @@
         margin-bottom: 25px;
       }
     }
+  }
+  .screen-talent-pipeline-services{
+    background: none !important;
+    .section__title{
+      color: #1a1a1a !important;
     }
+  }
   .nav-pills {
-      max-width: inherit !important;
-    }
+    max-width: inherit !important;
+  }
   .screen-advanced-manufacturing-technologies .col-my {
     max-width: inherit;
   }
@@ -314,6 +326,74 @@
       text-align: center;
     }
   }
+}
+.wrap-link-services{
+  .head{
+    font-size: 11px;
+    line-height: 17px;
+    color: #2E2E2E;
+    padding-bottom: 0;
+  }
+  .body{
+    margin-top: 7px;
+    background: orange;
+    width: 61px;
+    height: 61px;
+    font-size: 9px;
+    line-height: 9px;
+    padding-top: 21px;
+    padding-left: 4px;
+    font-family: auto;
+    a{
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+  }
+  .foot{
+    img{
+      max-width: 70px;
+      margin-top: 14px;
+    }
+  }
+}
+ul.links{
+  li{
+    a{
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 23px;
+      color: #2E2E2E;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 2px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #1a1a1a;
+        z-index: 0;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        right: -17px;
+        top: 5px;
+        width: 0;
+        height: 0;
+        border-top: 3px solid transparent;
+        border-left: 5px solid white;
+        border-bottom: 3px solid transparent;
+        z-index: 1;
+      }
+    }
+  }
+}
+.section__title-services{
+  flex: 0 0 100%;
 }
 @media screen and (max-width: 992px){
   .screen-slider {
@@ -360,15 +440,15 @@
   }
 }
 @media screen and (max-width: 992px){
-.screen .nav-pills-title {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 15px;
-  br {
-    display: none;
+  .screen .nav-pills-title {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    br {
+      display: none;
+    }
   }
-}
 }
 @media screen and (min-width: 1200px){
   #overview-process,#testimonials-process {
@@ -383,6 +463,9 @@
     .slider {
       &__card {
         max-width: 563px !important;
+        &-big{
+          max-width: 728px !important;
+        }
       }
     }
   }
@@ -390,6 +473,15 @@
     .slider {
       &__card {
         max-width: 819px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  ul.links{
+    li{
+      a{
+        font-size: 11px;
       }
     }
   }
