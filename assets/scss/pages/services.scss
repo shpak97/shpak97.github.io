@@ -373,6 +373,11 @@ ul.links{
 .section__title-services{
   flex: 0 0 100%;
 }
+.slider__logo {
+  max-height: 87px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
 @media screen and (max-width: 992px){
   .screen-slider {
     &.right, &.left {

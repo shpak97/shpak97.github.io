@@ -333,7 +333,7 @@ jQuery(function($) {
           settings: {
             slidesToShow: 1,
             variableWidth: false,
-            adaptiveHeight: true  
+            adaptiveHeight: true
           }
         },
       ]

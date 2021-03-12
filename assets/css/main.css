@@ -1386,6 +1386,12 @@ ul.links li a:before {
   flex: 0 0 100%;
 }
 
+.slider__logo {
+  max-height: 87px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 992px) {
   .screen-slider.right .my > .row, .screen-slider.left .my > .row {
     margin-left: 0;
