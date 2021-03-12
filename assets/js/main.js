@@ -58,8 +58,8 @@ jQuery(function($) {
       slidesToShow: 2,
       slidesToScroll: 1,
       dots: true,
-      appendDots: false,
-      nextArrow: false,
+      appendDots:$(".dots-list.testimonials.people"),
+      nextArrow: '<div class="arrow-nextSlide"></div>',
       prevArrow:false,
       variableWidth: true,
       responsive: [
@@ -67,7 +67,6 @@ jQuery(function($) {
           breakpoint: 1200,
           settings: {
             slidesToShow: 1,
-            appendDots:$(".dots-list.testimonials.people"),
             variableWidth: false,
           }
         },
@@ -77,9 +76,9 @@ jQuery(function($) {
       infinite: true,
       slidesToShow: 2,
       slidesToScroll: 1,
-      dots: false,
-      appendDots: false,
-      nextArrow: false,
+      dots: true,
+      appendDots:$(".dots-list.whatsNew.people"),
+      nextArrow: '<div class="arrow-nextSlide"></div>',
       prevArrow:false,
       variableWidth: true,
       responsive: [
@@ -88,8 +87,6 @@ jQuery(function($) {
           settings: {
             slidesToShow: 1,
             variableWidth: false,
-            dots: true,
-            appendDots:$(".dots-list.whatsNew.people"),
           }
         },
       ]
@@ -335,6 +332,30 @@ jQuery(function($) {
           breakpoint: 1200,
           settings: {
             slidesToShow: 1,
+            variableWidth: false,
+            adaptiveHeight: true  
+          }
+        },
+      ]
+    });
+    $('#education-initiatives-slider .slider').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      dots: true,
+      nextArrow: '<div class="arrow-nextSlide"></div>',
+      prevArrow:false,
+      appendDots:$(".dots-list.education-initiatives-slider-dots.education-initiatives-slider"),
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 1,
+            variableWidth: false,
+            adaptiveHeight: true
           }
         },
       ]
