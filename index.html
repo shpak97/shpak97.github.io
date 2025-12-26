@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Куля Передбачень</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #1a0b2e 0%, #2d1b4e 30%, #3e2463 50%, #2d1b4e 70%, #1a0b2e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Зоряне небо */
+        .starry-sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        .star.small {
+            width: 2px;
+            height: 2px;
+        }
+
+        .star.medium {
+            width: 3px;
+            height: 3px;
+        }
+
+        .star.large {
+            width: 4px;
+            height: 4px;
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Сніжинки */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5em;
+            animation: fall linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        /* Санта на оленях */
+        .santa-sleigh {
+            position: fixed;
+            top: 15%;
+            left: -300px;
+            width: 300px;
+            height: 150px;
+            z-index: 50;
+            animation: santaFly 25s linear infinite;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+        }
+
+        @keyframes santaFly {
+            0% {
+                left: -300px;
+                top: 15%;
+            }
+            25% {
+                top: 25%;
+            }
+            50% {
+                top: 20%;
+                left: 50%;
+            }
+            75% {
+                top: 10%;
+            }
+            100% {
+                left: calc(100% + 300px);
+                top: 15%;
+            }
+        }
+
+        /* Олень - базовий стиль */
+        .reindeer {
+            position: absolute;
+            top: 30px;
+            width: 80px;
+            height: 70px;
+            z-index: 8;
+            left: 190px;
+        }
+
+        .reindeer-body {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            width: 45px;
+            height: 32px;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
+            border-radius: 50% 50% 45% 45%;
+        }
+
+        .reindeer-head {
+            position: absolute;
+            left: 50px;
+            top: 4px;
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(135deg, #A0522D 0%, #CD853F 50%, #A0522D 100%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .reindeer-antler {
+            position: absolute;
+            width: 4px;
+            height: 18px;
+            background: #654321;
+            border-radius: 2px;
+        }
+
+        .reindeer-antler.left {
+            top: -15px;
+            left: 6px;
+            transform: rotate(-25deg);
+        }
+
+        .reindeer-antler.right {
+            top: -15px;
+            right: 6px;
+            transform: rotate(25deg);
+        }
+
+        .reindeer-antler::before,
+        .reindeer-antler::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 10px;
+            background: #654321;
+            border-radius: 2px;
+            top: 3px;
+        }
+
+        .reindeer-antler.left::before {
+            left: -4px;
+            transform: rotate(-35deg);
+        }
+
+        .reindeer-antler.left::after {
+            right: -4px;
+            transform: rotate(35deg);
+        }
+
+        .reindeer-antler.right::before {
+            left: -4px;
+            transform: rotate(-35deg);
+        }
+
+        .reindeer-antler.right::after {
+            right: -4px;
+            transform: rotate(35deg);
+        }
+
+        .reindeer-nose {
+            position: absolute;
+            right: -3px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #ff3333;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 1);
+            animation: noseGlow 1s infinite alternate;
+            z-index: 3;
+        }
+
+        @keyframes noseGlow {
+            0% { 
+                box-shadow: 0 0 15px rgba(255, 51, 51, 1);
+                background: #ff3333;
+            }
+            100% { 
+                box-shadow: 0 0 25px rgba(255, 51, 51, 1), 0 0 35px rgba(255, 100, 100, 0.5);
+                background: #ff5555;
+            }
+        }
+
+        .reindeer-ear {
+            position: absolute;
+            width: 8px;
+            height: 12px;
+            background: #A0522D;
+            border-radius: 50% 50% 0 0;
+            top: 2px;
+        }
+
+        .reindeer-ear.left {
+            left: 8px;
+            transform: rotate(-15deg);
+        }
+
+        .reindeer-ear.right {
+            right: 8px;
+            transform: rotate(15deg);
+        }
+
+        .reindeer-leg {
+            position: absolute;
+            width: 5px;
+            height: 20px;
+            background: linear-gradient(180deg, #8B4513 0%, #654321 100%);
+            border-radius: 3px;
+            bottom: 0;
+        }
+
+        .reindeer-leg.front-left { 
+            left: 18px;
+            top: 40px;
+            z-index: -1;
+        }
+        .reindeer-leg.front-right { 
+            left: 28px;
+            top: 40px;
+            z-index: -1;
+        }
+        .reindeer-leg.back-left { 
+            left: 40px;
+            top: 40px;
+            z-index: -1;
+        }
+        .reindeer-leg.back-right { 
+            left: 50px;
+            top: 35px;
+            z-index: -1;
+            height: 25px;
+        }
+
+        .reindeer-tail {
+            position: absolute;
+            left: 5px;
+            top: 18px;
+            width: 12px;
+            height: 16px;
+            background: #654321;
+            border-radius: 50%;
+        }
+
+        /* Мотузка упряжки */
+        .harness {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, #8B4513 0%, #654321 50%, #8B4513 100%);
+            top: 50px;
+            z-index: 7;
+            left: 165px;
+            width: 35px;
+        }
+
+        /* Сани - ПОПЕРЕДУ */
+        .sleigh {
+            position: absolute;
+            left: 0;
+            top: 45px;
+            width: 180px;
+            height: 80px;
+            z-index: 15;
+        }
+
+        .sleigh-runner {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, 
+                #FFD700 0%, 
+                #FFA500 20%, 
+                #FFD700 40%, 
+                #FFA500 60%, 
+                #FFD700 80%, 
+                #FFA500 100%);
+            border-radius: 50px;
+            box-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.8),
+                0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .sleigh-runner::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 25%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
+            filter: blur(3px);
+        }
+
+        .sleigh-base {
+            position: absolute;
+            bottom: 12px;
+            left: 5%;
+            width: 90%;
+            height: 45px;
+            background: linear-gradient(135deg, 
+                #c62828 0%, 
+                #e53935 30%, 
+                #d32f2f 50%,
+                #e53935 70%,
+                #c62828 100%);
+            border-radius: 25px 25px 8px 8px;
+            box-shadow: 
+                inset 0 3px 8px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 8px rgba(0, 0, 0, 0.4),
+                0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .sleigh-base::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 30%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.3) 50%, 
+                transparent 100%);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        .sleigh-back {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            width: 30px;
+            height: 50px;
+            background: linear-gradient(135deg, #c62828 0%, #e53935 50%, #d32f2f 100%);
+            border-radius: 18px 18px 0 0;
+            box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Санта */
+        .santa {
+            position: absolute;
+            left: 45px;
+            top: -15px;
+            width: 80px;
+            height: 90px;
+            z-index: 5;
+        }
+
+        .santa-body {
+            position: absolute;
+            bottom: 12px;
+            left: 15px;
+            width: 50px;
+            height: 45px;
+            background: linear-gradient(135deg, 
+                #c62828 0%, 
+                #e53935 40%, 
+                #d32f2f 60%,
+                #c62828 100%);
+            border-radius: 15px;
+            box-shadow: 
+                inset 0 3px 8px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 8px rgba(0, 0, 0, 0.4),
+                0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .santa-body::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            width: 30%;
+            height: 50%;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.2));
+            border-radius: 50%;
+            filter: blur(3px);
+        }
+
+        .santa-head {
+            position: absolute;
+            top: 15px;
+            left: 18px;
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(circle at 30% 30%, #FFE4C4, #FFDAB9);
+            border-radius: 50%;
+            box-shadow: 
+                0 3px 8px rgba(0, 0, 0, 0.3),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .santa-eye {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            top: 38%;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .santa-eye.left { left: 22%; }
+        .santa-eye.right { right: 22%; }
+
+        .santa-eye::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        /* Посмішка Санти */
+        .santa-smile {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 9px;
+            border: 2px solid #8B0000;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            background: transparent;
+        }
+
+        .santa-smile::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 4px;
+            background: #FF6B6B;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .santa-hat {
+            position: absolute;
+            top: -5px;
+            left: 15px;
+            width: 45px;
+            height: 36px;
+            background: linear-gradient(135deg, 
+                #c62828 0%, 
+                #e53935 40%, 
+                #d32f2f 60%,
+                #c62828 100%);
+            border-radius: 50% 50% 0 0;
+            transform: rotate(-10deg);
+            box-shadow: 
+                0 3px 8px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        .santa-hat::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 
+                0 1px 3px rgba(0, 0, 0, 0.2),
+                inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .santa-hat::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -4px;
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, white, #f0f0f0);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 12px rgba(255, 255, 255, 0.9),
+                0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .santa-beard {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 16px;
+            background: radial-gradient(ellipse at top, white, #f8f8f8);
+            border-radius: 0 0 50% 50%;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.1),
+                inset 0 2px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .santa-beard::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 30%;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        .santa-mustache {
+            position: absolute;
+            top: 58%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26px;
+            height: 10px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .santa-mustache::before,
+        .santa-mustache::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .santa-mustache::before {
+            left: -4px;
+        }
+
+        .santa-mustache::after {
+            right: -4px;
+        }
+
+        .santa-belt {
+            position: absolute;
+            top: 55%;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            box-shadow: 
+                inset 0 2px 4px rgba(0, 0, 0, 0.6),
+                0 1px 0 rgba(255, 255, 255, 0.1),
+                0 -1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .santa-belt::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFC700 50%, #FFD700 100%);
+            border: 2.5px solid #8B6914;
+            border-radius: 3px;
+            top: -2px;
+            box-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.9),
+                inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .santa-arm {
+            position: absolute;
+            width: 16px;
+            height: 35px;
+            background: linear-gradient(180deg, 
+                #c62828 0%, 
+                #d32f2f 50%,
+                #c62828 100%);
+            border-radius: 8px;
+            top: 22px;
+            box-shadow: 
+                inset 1px 1px 3px rgba(255, 255, 255, 0.2),
+                2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .santa-arm.left {
+            left: 62px;
+            top: 37px;
+            transform: rotate(-38deg);
+        }
+
+        .santa-arm.right {
+            right: 62px;
+            transform: rotate(15deg);
+            top: 37px;
+            z-index: -1;
+        }
+
+        .santa-hand {
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle at 30% 30%, #FFE4C4, #FFDAB9);
+            border-radius: 50%;
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.3),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Мішок з подарунками */
+        .gift-bag {
+            position: absolute;
+            right: 20px;
+            top: 8px;
+            width: 45px;
+            height: 50px;
+            background: linear-gradient(135deg, #6d4c41 0%, #8d6e63 40%, #6d4c41 100%);
+            border-radius: 0 0 50% 50%;
+            box-shadow: 
+                inset -3px -3px 8px rgba(0, 0, 0, 0.4),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .gift-bag::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 18px;
+            background: linear-gradient(135deg, #d32f2f 0%, #e53935 100%);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .gift-bag::after {
+            content: '🎁';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+        }
+
+        /* Зірки від саней */
+        .sleigh-sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 1s infinite;
+        }
+
+        .sleigh-sparkle:nth-child(1) {
+            top: 10px;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .sleigh-sparkle:nth-child(2) {
+            top: 30px;
+            left: -15px;
+            animation-delay: 0.3s;
+        }
+
+        .sleigh-sparkle:nth-child(3) {
+            top: 50px;
+            left: -25px;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Новорічні вогники */
+        .fairy-lights {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 3;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .light {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: lightGlow 2s infinite ease-in-out;
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .light:nth-child(1) { background: #ff6b6b; color: #ff6b6b; animation-delay: 0s; }
+        .light:nth-child(2) { background: #4ecdc4; color: #4ecdc4; animation-delay: 0.3s; }
+        .light:nth-child(3) { background: #ffe66d; color: #ffe66d; animation-delay: 0.6s; }
+        .light:nth-child(4) { background: #a8e6cf; color: #a8e6cf; animation-delay: 0.9s; }
+        .light:nth-child(5) { background: #ff8b94; color: #ff8b94; animation-delay: 1.2s; }
+        .light:nth-child(6) { background: #95e1d3; color: #95e1d3; animation-delay: 1.5s; }
+
+        @keyframes lightGlow {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.3);
+            }
+        }
+
+        .instruction {
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-shadow: 
+                0 0 20px rgba(135, 206, 250, 0.8),
+                0 0 40px rgba(135, 206, 250, 0.5),
+                0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 
+                0 0 8px rgba(135, 206, 250, 0.3),
+                0 1px 2px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 20px rgba(135, 206, 250, 0.8),
+                0 0 40px rgba(135, 206, 250, 0.5),
+                0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: titleShine 3s infinite alternate;
+        }
+
+        @keyframes titleShine {
+            0% { 
+                text-shadow: 
+                    0 0 20px rgba(135, 206, 250, 0.8),
+                    0 0 40px rgba(135, 206, 250, 0.5),
+                    0 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            100% { 
+                text-shadow: 
+                    0 0 30px rgba(135, 206, 250, 1),
+                    0 0 60px rgba(135, 206, 250, 0.7),
+                    0 2px 6px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9em;
+            font-weight: 300;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 
+                0 0 8px rgba(135, 206, 250, 0.3),
+                0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Куля */
+        .crystal-ball-container {
+            position: relative;
+            width: 420px;
+            height: 500px;
+            margin: 0 auto 30px;
+            perspective: 1500px;
+        }
+
+        /* Підставка */
+        .crystal-stand {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 100px;
+            z-index: 5;
+        }
+
+        .stand-base {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to bottom,
+                #FFD700 0%,
+                #FFA500 50%,
+                #FF8C00 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 5px 25px rgba(255, 215, 0, 0.6),
+                inset 0 -3px 10px rgba(139, 69, 19, 0.4),
+                inset 0 2px 8px rgba(255, 250, 205, 0.5);
+        }
+
+        .stand-pillar {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 60px;
+            background: linear-gradient(to bottom,
+                #FFE4B5 0%,
+                #FFD700 30%,
+                #FFA500 70%,
+                #FF8C00 100%);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+            box-shadow: 
+                inset 0 5px 15px rgba(255, 250, 205, 0.4),
+                inset 0 -5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .stand-top {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 25px;
+            background: linear-gradient(to bottom,
+                #FFFACD 0%,
+                #FFD700 50%,
+                #FFA500 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 -5px 30px rgba(255, 215, 0, 0.8),
+                inset 0 3px 10px rgba(255, 255, 255, 0.4),
+                inset 0 -3px 10px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Велика прозора куля */
+        .crystal-ball {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            height: 350px;
+            background: 
+                radial-gradient(ellipse at 25% 20%, 
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0.15) 8%,
+                    transparent 20%),
+                radial-gradient(circle at 50% 50%, 
+                    rgba(200, 220, 255, 0.15) 0%,
+                    rgba(150, 180, 230, 0.1) 40%,
+                    rgba(100, 140, 200, 0.05) 70%,
+                    transparent 100%);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 50px 120px rgba(0, 0, 0, 0.8),
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                inset -50px -50px 100px rgba(0, 0, 0, 0.3),
+                inset 40px 40px 80px rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(1px);
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        /* Основний блиск */
+        .main-highlight {
+            position: absolute;
+            top: 50px;
+            left: 80px;
+            width: 180px;
+            height: 220px;
+            background: radial-gradient(ellipse 90px 120px at 50% 40%,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.8) 8%,
+                rgba(255, 255, 255, 0.5) 20%,
+                rgba(230, 240, 255, 0.3) 35%,
+                rgba(200, 220, 255, 0.15) 50%,
+                transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(2px);
+            transform: rotate(-20deg);
+        }
+
+        .secondary-highlight {
+            position: absolute;
+            bottom: 80px;
+            right: 70px;
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle,
+                rgba(255, 255, 255, 0.6) 0%,
+                rgba(255, 255, 255, 0.3) 30%,
+                transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Туман всередині кулі */
+        .fog-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .fog-container.active {
+            opacity: 1;
+        }
+
+        /* Святкові частинки замість туману */
+        .fog-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        /* Перша частинка - Кола що розходяться */
+        .fog-layer:nth-child(1) {
+            animation: ripples 2s ease-out infinite;
+        }
+
+        .fog-layer:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(138, 43, 226, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+            animation: expandRing 2s ease-out infinite;
+        }
+
+        .fog-layer:nth-child(1)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 105, 180, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+            animation: expandRing 2s ease-out infinite 1s;
+        }
+
+        @keyframes expandRing {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+
+        /* Друга частинка - Променеве світло */
+        .fog-layer:nth-child(2) {
+            animation: rotateRays 4s linear infinite;
+        }
+
+        .fog-layer:nth-child(2)::before,
+        .fog-layer:nth-child(2)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(255, 215, 0, 0.8) 45%,
+                rgba(255, 215, 0, 1) 50%,
+                rgba(255, 215, 0, 0.8) 55%,
+                transparent 100%
+            );
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+        }
+
+        .fog-layer:nth-child(2)::before {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        .fog-layer:nth-child(2)::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        @keyframes rotateRays {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Третя частинка - Магічні спіралі */
+        .fog-layer:nth-child(3) {
+            animation: spiralSpin 3s linear infinite;
+        }
+
+        .fog-layer:nth-child(3)::before {
+            content: '✨';
+            position: absolute;
+            font-size: 1.5em;
+            color: rgba(138, 43, 226, 0.9);
+            text-shadow: 0 0 15px rgba(138, 43, 226, 1);
+            animation: spiralOrbit 3s linear infinite;
+            transform-origin: 50% 50%;
+        }
+
+        .fog-layer:nth-child(3)::after {
+            content: '⭐';
+            position: absolute;
+            font-size: 1.5em;
+            color: rgba(255, 215, 0, 0.9);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 1);
+            animation: spiralOrbit 3s linear infinite reverse;
+            transform-origin: 50% 50%;
+        }
+
+        @keyframes spiralOrbit {
+            0% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0deg) translateX(0px);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(360deg) translateX(80px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spiralSpin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Розсіювання - плавне зникнення */
+        .fog-container.clearing .fog-layer {
+            animation: particleFade 2s forwards;
+        }
+
+        @keyframes particleFade {
+            0% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% { 
+                opacity: 0;
+                filter: blur(60px);
+                transform: scale(1.5);
+            }
+        }
+
+        /* Передбачення */
+        .fortune-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 
+                0 0 15px rgba(135, 206, 250, 1),
+                0 0 30px rgba(135, 206, 250, 0.8),
+                0 0 45px rgba(100, 149, 237, 0.6);
+            line-height: 1.3;
+            opacity: 0;
+            z-index: 15;
+            letter-spacing: 1px;
+        }
+
+        .fortune-text.show {
+            animation: fortuneAppear 2s forwards;
+        }
+
+        @keyframes fortuneAppear {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .fortune-text.glow {
+            animation: fortuneGlow 2s infinite alternate;
+        }
+
+        @keyframes fortuneGlow {
+            0% {
+                text-shadow: 
+                    0 0 15px rgba(135, 206, 250, 1),
+                    0 0 30px rgba(135, 206, 250, 0.8),
+                    0 0 45px rgba(100, 149, 237, 0.6);
+            }
+            100% {
+                text-shadow: 
+                    0 0 25px rgba(135, 206, 250, 1),
+                    0 0 50px rgba(135, 206, 250, 1),
+                    0 0 75px rgba(100, 149, 237, 0.8);
+            }
+        }
+
+        /* Анімація тряски */
+        .shake {
+            animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+            0%, 100% { 
+                transform: translateX(-50%) rotate(0deg); 
+            }
+            10%, 30%, 50%, 70%, 90% { 
+                transform: translateX(-53%) rotate(-3deg); 
+            }
+            20%, 40%, 60%, 80% { 
+                transform: translateX(-47%) rotate(3deg); 
+            }
+        }
+
+        /* Кнопка */
+        .fortune-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            padding: 20px 60px;
+            font-size: 1.5em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 
+                0 10px 40px rgba(102, 126, 234, 0.4),
+                0 0 30px rgba(240, 147, 251, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fortune-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .fortune-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .fortune-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 15px 50px rgba(102, 126, 234, 0.6),
+                0 0 40px rgba(240, 147, 251, 0.5),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .fortune-button:active {
+            transform: translateY(-2px);
+        }
+
+        .fortune-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .crystal-ball-container {
+                width: 350px;
+                height: 450px;
+            }
+
+            .crystal-ball {
+                width: 320px;
+                height: 320px;
+                top: 60px;
+            }
+
+            .fortune-text {
+                font-size: 1.3em;
+            }
+
+            .fairy-lights {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Зоряне небо -->
+    <div class="starry-sky" id="starrySky"></div>
+    
+    <!-- Сніжинки -->
+    <div id="snowContainer"></div>
+    
+    <!-- Санта на оленях -->
+    <div class="santa-sleigh">
+        <!-- Сани ПОПЕРЕДУ -->
+        <div class="sleigh">
+            <div class="sleigh-runner"></div>
+            <div class="sleigh-base"></div>
+            <div class="sleigh-back"></div>
+            
+            <!-- Санта -->
+            <div class="santa">
+                <div class="santa-arm left">
+                    <div class="santa-hand"></div>
+                </div>
+                <div class="santa-body">
+                    <div class="santa-belt"></div>
+                </div>
+                <div class="santa-head">
+                    <div class="santa-eye left"></div>
+                    <div class="santa-eye right"></div>
+                    <div class="santa-smile"></div>
+                    <div class="santa-mustache"></div>
+                    <div class="santa-beard"></div>
+                </div>
+                <div class="santa-hat"></div>
+                <div class="santa-arm right">
+                    <div class="santa-hand"></div>
+                </div>
+            </div>
+            
+            <!-- Мішок з подарунками -->
+            <div class="gift-bag"></div>
+            
+            <!-- Іскри -->
+            <div class="sleigh-sparkle"></div>
+            <div class="sleigh-sparkle"></div>
+            <div class="sleigh-sparkle"></div>
+        </div>
+        
+        <!-- Мотузка упряжки -->
+        <div class="harness"></div>
+        
+        <!-- Один олень ПОЗАДУ -->
+        <div class="reindeer">
+            <div class="reindeer-tail"></div>
+            <div class="reindeer-body"></div>
+            <div class="reindeer-leg front-left"></div>
+            <div class="reindeer-leg front-right"></div>
+            <div class="reindeer-leg back-left"></div>
+            <div class="reindeer-leg back-right"></div>
+            <div class="reindeer-head">
+                <div class="reindeer-ear left"></div>
+                <div class="reindeer-ear right"></div>
+                <div class="reindeer-antler left"></div>
+                <div class="reindeer-antler right"></div>
+                <div class="reindeer-nose"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Новорічні вогники -->
+    <div class="fairy-lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <div class="container">
+        <h1>🔮 Куля Передбачень 🔮</h1>
+        <p class="subtitle">by KeenEthics ✨</p>
+        <p class="instruction">Поглянь у своє майбутнє...</p>
+        
+        <div class="crystal-ball-container">
+            <!-- Підставка -->
+            <div class="crystal-stand">
+                <div class="stand-base"></div>
+                <div class="stand-pillar"></div>
+                <div class="stand-top"></div>
+            </div>
+            
+            <!-- Куля -->
+            <div class="crystal-ball" id="crystalBall">
+                <div class="main-highlight"></div>
+                <div class="secondary-highlight"></div>
+                
+                <!-- Святкові частинки -->
+                <div class="fog-container" id="fogContainer">
+                    <div class="fog-layer"></div>
+                    <div class="fog-layer"></div>
+                    <div class="fog-layer"></div>
+                </div>
+                
+                <!-- Текст передбачення -->
+                <div class="fortune-text" id="fortuneText"></div>
+            </div>
+        </div>
+
+        <button class="fortune-button" id="fortuneBtn" onclick="shakeBall()">
+            ✨ Потрусити кулю ✨
+        </button>
+    </div>
+
+    <script>
+        // Можливі передбачення для sales team
+        const fortunes = [
+            "Вас запросять на весняне барбекю в офісі KeenEthics",
+            "Ви перевиконаєте всі KPI цього року",
+            "Лід, що зник, воскресне з х2 скоупом та бюджетом",
+            `Клієнт напише "ми закрили раунд, потрібно ще 5 девів"`,
+            "Бонус дозволить перестати дивитись на ціни в меню",
+            "CRM'ка буде заповнюватись сама",
+            "Pipeline буде завжди green",
+            "Partnership revenue подвоїться за квартал",
+            "Міжнародний партнер сам вийде на вас",
+            `Клієнт не попросить "як Uber, тільки дешевше"`,
+            `Клієнт не скаже "прикрутіть AI кудись"`,
+            "Контрактів буде так багато, що bench закінчиться"
+        ];
+
+        let isShaking = false;
+
+        // Створення зірок
+        function createStars() {
+            const sky = document.getElementById('starrySky');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                const size = Math.random();
+                
+                if (size > 0.8) {
+                    star.className = 'star large';
+                } else if (size > 0.5) {
+                    star.className = 'star medium';
+                } else {
+                    star.className = 'star small';
+                }
+                
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                sky.appendChild(star);
+            }
+        }
+
+        // Створення сніжинок
+        function createSnowflakes() {
+            const container = document.getElementById('snowContainer');
+            const snowflakeCount = 30;
+            const snowflakes = ['❄', '❅', '❆'];
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.fontSize = (Math.random() * 1 + 0.8) + 'em';
+                container.appendChild(snowflake);
+            }
+        }
+
+        function shakeBall() {
+            if (isShaking) return;
+            
+            isShaking = true;
+            const ball = document.getElementById('crystalBall');
+            const fogContainer = document.getElementById('fogContainer');
+            const fortuneText = document.getElementById('fortuneText');
+            const fortuneBtn = document.getElementById('fortuneBtn');
+            
+            fortuneBtn.disabled = true;
+            
+            // Ховаємо попереднє передбачення
+            fortuneText.classList.remove('show', 'glow');
+            fortuneText.style.opacity = '0';
+            
+            // Починаємо тряску
+            ball.classList.add('shake');
+            
+            setTimeout(() => {
+                ball.classList.remove('shake');
+                
+                // Показуємо густий туман
+                fogContainer.classList.add('active');
+                fogContainer.classList.remove('clearing');
+                
+                // Через 2 секунди починаємо розсіювати туман
+                setTimeout(() => {
+                    fogContainer.classList.add('clearing');
+                    
+                    // Вибираємо випадкове передбачення
+                    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+                    fortuneText.textContent = randomFortune;
+                    
+                    // Через 1.5 секунди показуємо текст
+                    setTimeout(() => {
+                        fortuneText.classList.add('show');
+
+                        // Через 2 секунди додаємо світіння
+                        setTimeout(() => {
+                            fortuneText.classList.add('glow');
+
+                            // Через 3 секунди туман повністю зникає і можна знову трясти
+                            setTimeout(() => {
+                                fogContainer.classList.remove('active', 'clearing');
+                                fortuneBtn.disabled = false;
+                                isShaking = false;
+                            }, 3000);
+                        }, 7000);
+                    }, 1500);
+                }, 2000);
+            }, 800);
+        }
+
+        // Підтримка клавіші Enter
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !isShaking) {
+                shakeBall();
+            }
+        });
+
+        // Ініціалізація
+        createStars();
+        createSnowflakes();
+
+        // Автоматичне відтворення музики
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('backgroundMusic');
+            // Спроба автоматичного відтворення
+            audio.play().catch(err => {
+                console.log('Autoplay blocked, waiting for user interaction');
+                // Якщо автоплей заблоковано, музика запуститься при першому кліку
+                document.body.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+    </script>
+
+    <!-- Фонова музика Jingle Bells -->
+    <audio id="backgroundMusic" loop volume="0.5">
+        <source src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Jingle%20Bells.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
